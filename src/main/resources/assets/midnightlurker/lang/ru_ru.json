@@ -152,5 +152,7 @@
   "entity.midnightlurker.midnight_lurker_runtrue": "Бабай",
   "subtitles.lurker_stun_over": "",
   "item.midnightlurkeroverhauled.void_gateway_spawn_egg": "Яйцо призыва врат пустоты",
-  "entity.midnightlurkeroverhauled.midnight_lurker_seen_angressive": "Бабай"
+  "entity.midnightlurkeroverhauled.midnight_lurker_seen_angressive": "Бабай",
+  "itemGroup.midnightlurker": "Бабай",
+  "itemGroup.midnightlurkeroverhauled": "Бабай"
 }
