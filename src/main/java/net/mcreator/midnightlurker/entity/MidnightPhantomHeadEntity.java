@@ -348,9 +348,6 @@ public class MidnightPhantomHeadEntity extends Monster implements GeoEntity {
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			if (this.isShiftKeyDown()) {
-				return event.setAndContinue(RawAnimation.begin().thenLoop("animation.midnightlurkerphantomhead.close"));
-			}
 			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.midnightlurkerphantomhead.idle"));
 		}
 		return PlayState.STOP;

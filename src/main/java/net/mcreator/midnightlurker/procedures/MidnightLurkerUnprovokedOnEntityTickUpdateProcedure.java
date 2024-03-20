@@ -375,8 +375,7 @@ public class MidnightLurkerUnprovokedOnEntityTickUpdateProcedure {
 			}
 		}
 		if (entity.getPersistentData().getDouble("StunTimer") > 0 && entity.getPersistentData().getDouble("StunTimer") < 98) {
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 255, false, false));
+			entity.setDeltaMovement(new Vec3(0, 0, 0));
 			if (entity instanceof MidnightLurkerUnprovokedEntity) {
 				((MidnightLurkerUnprovokedEntity) entity).setAnimation("stunned5");
 			}

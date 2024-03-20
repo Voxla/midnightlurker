@@ -11,7 +11,7 @@
     "isInstant": false,
     "isBad": true,
     "isBenefitical": false,
-    "renderStatusInInventory": true,
+    "renderStatusInInventory": false,
     "renderStatusInHUD": false,
     "onActiveTick": {
       "name": "Insanitysounds"

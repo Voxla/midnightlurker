@@ -1,6 +1,7 @@
 package net.mcreator.midnightlurker.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
@@ -8,12 +9,23 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.midnightlurker.init.MidnightlurkerModMobEffects;
+
 import java.util.Comparator;
+
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.File;
+import java.io.BufferedReader;
+
+import com.google.gson.Gson;
 
 public class AmnesiaOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -22,6 +34,8 @@ public class AmnesiaOnEffectActiveTickProcedure {
 		double raytrace_distance = 0;
 		String found_entity_name = "";
 		boolean entity_found = false;
+		File lurker = new File("");
+		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		raytrace_distance = 0;
 		entity_found = false;
 		for (int index0 = 0; index0 < 30; index0++) {
@@ -164,6 +178,25 @@ public class AmnesiaOnEffectActiveTickProcedure {
 							}
 						}.compareDistOf((entity.getX()), (entity.getY()), (entity.getZ()))).findFirst().orElse(null)).discard();
 				}
+			}
+		}
+		lurker = new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "midnightlurkerconfig.json");
+		{
+			try {
+				BufferedReader bufferedReader = new BufferedReader(new FileReader(lurker));
+				StringBuilder jsonstringbuilder = new StringBuilder();
+				String line;
+				while ((line = bufferedReader.readLine()) != null) {
+					jsonstringbuilder.append(line);
+				}
+				bufferedReader.close();
+				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				if (mainjsonobject.get("show_amnesia_effect_in_inv").getAsBoolean() == true) {
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(MidnightlurkerModMobEffects.AMNESIA_SHOW_IN_INV.get(), 8, 0, false, false));
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 		}
 	}

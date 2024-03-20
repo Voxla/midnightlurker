@@ -221,10 +221,15 @@ public class MidnightPhantomHeadOnEntityTickUpdateProcedure {
 			}
 		}
 		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 11, 11, 11), e -> true).isEmpty()) {
+			entity.getPersistentData().putDouble("phantomshaking", 1);
+		} else if (!(!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 11, 11, 11), e -> true).isEmpty())) {
+			entity.getPersistentData().putDouble("phantomshaking", 0);
+		}
+		if (entity.getPersistentData().getDouble("phantomshaking") == 1) {
 			if (entity instanceof MidnightPhantomHeadEntity) {
 				((MidnightPhantomHeadEntity) entity).setAnimation("animation.midnightlurkerphantomhead.close");
 			}
-		} else if (!(!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 11, 11, 11), e -> true).isEmpty())) {
+		} else if (entity.getPersistentData().getDouble("phantomshaking") == 0) {
 			if (entity instanceof MidnightPhantomHeadEntity) {
 				((MidnightPhantomHeadEntity) entity).setAnimation("empty");
 			}
