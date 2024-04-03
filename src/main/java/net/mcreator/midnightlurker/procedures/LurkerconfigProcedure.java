@@ -56,6 +56,8 @@ public class LurkerconfigProcedure {
 			mainjsonobject.addProperty("amnesia", true);
 			mainjsonobject.addProperty("invisible_entities_spawning", true);
 			mainjsonobject.addProperty("encounters_progress_stages", true);
+			mainjsonobject.addProperty("show_amnesia_effect_in_inv", true);
+			mainjsonobject.addProperty("show_insanity_effect_in_inv", true);
 			{
 				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 				try {
@@ -144,6 +146,32 @@ public class LurkerconfigProcedure {
 				}
 				if (lurker.exists() && !mainjsonobject.has("encounters_progress_stages")) {
 					mainjsonobject.addProperty("encounters_progress_stages", true);
+					{
+						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(lurker);
+							fileWriter.write(mainGSONBuilderVariable.toJson(mainjsonobject));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
+				if (lurker.exists() && !mainjsonobject.has("show_amnesia_effect_in_inv")) {
+					mainjsonobject.addProperty("show_amnesia_effect_in_inv", true);
+					{
+						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(lurker);
+							fileWriter.write(mainGSONBuilderVariable.toJson(mainjsonobject));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
+				if (lurker.exists() && !mainjsonobject.has("show_insanity_effect_in_inv")) {
+					mainjsonobject.addProperty("show_insanity_effect_in_inv", true);
 					{
 						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 						try {

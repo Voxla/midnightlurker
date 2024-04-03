@@ -44,11 +44,11 @@
       "registry_name": "midnight_lurker_aggressive",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerAggressiveLayer.java",
           "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_aggressive_spawn_egg.json",
           "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerAggressiveEntity.java",
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerAggressiveRenderer.java",
           "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerAggressiveModel.java",
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerAggressiveRenderer.java"
+          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerAggressiveLayer.java"
         ]
       }
     },
@@ -61,11 +61,11 @@
       "registry_name": "midnight_lurkertpose",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkertposeModel.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkertposeLayer.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkertposeEntity.java",
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkertposeRenderer.java",
           "src/main/resources/assets/midnightlurker/models/item/midnight_lurkertpose_spawn_egg.json",
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkertposeRenderer.java"
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkertposeEntity.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkertposeModel.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkertposeLayer.java"
         ]
       }
     },
@@ -206,11 +206,12 @@
       "registry_name": "midnight_lurker_stalking",
       "metadata": {
         "files": [
-          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_stalking_spawn_egg.json",
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerStalkingRenderer.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerStalkingModel.java",
           "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerStalkingEntity.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerStalkingLayer.java"
+          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerStalkingLayer.java",
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerStalkingRenderer.java",
+          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_stalking_spawn_egg.json",
+          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerStalkingModel.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_stalking_biome_modifier.json"
         ]
       }
     },
@@ -336,11 +337,12 @@
       "registry_name": "midnight_lurker_invisible",
       "metadata": {
         "files": [
-          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_invisible_spawn_egg.json",
-          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerInvisibleLayer.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerInvisibleEntity.java",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerInvisibleRenderer.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerInvisibleModel.java"
+          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerInvisibleModel.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerInvisibleEntity.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerInvisibleLayer.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_invisible_biome_modifier.json",
+          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_invisible_spawn_egg.json"
         ]
       }
     },
@@ -390,8 +392,9 @@
         "files": [
           "src/main/java/net/mcreator/midnightlurker/client/renderer/SpookyambienceentityRenderer.java",
           "src/main/resources/assets/midnightlurker/models/item/spookyambienceentity_spawn_egg.json",
+          "src/main/java/net/mcreator/midnightlurker/entity/model/SpookyambienceentityModel.java",
           "src/main/java/net/mcreator/midnightlurker/entity/SpookyambienceentityEntity.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/model/SpookyambienceentityModel.java"
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/spookyambienceentity_biome_modifier.json"
         ]
       }
     },
@@ -441,8 +444,9 @@
         "files": [
           "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerSeenAngressiveEntity.java",
           "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerSeenAngressiveLayer.java",
-          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_seen_angressive_spawn_egg.json",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_seen_angressive_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerSeenAngressiveModel.java",
+          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_seen_angressive_spawn_egg.json",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerSeenAngressiveRenderer.java"
         ]
       }
@@ -584,9 +588,9 @@
       "registry_name": "destroytex",
       "metadata": {
         "files": [
+          "src/main/resources/assets/midnightlurker/models/item/destroytex_spawn_egg.json",
           "src/main/java/net/mcreator/midnightlurker/entity/DestroytexEntity.java",
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/DestroytexRenderer.java",
-          "src/main/resources/assets/midnightlurker/models/item/destroytex_spawn_egg.json"
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/DestroytexRenderer.java"
         ]
       }
     },
@@ -770,7 +774,7 @@
       "registry_name": "chasetimerfortesting",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/ChasetimerfortestingOverlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/ChasetimerfortestingOverlay.java"
         ]
       }
     },
@@ -798,9 +802,9 @@
       "registry_name": "destroytex_3",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/Destroytex3Entity.java",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/Destroytex3Renderer.java",
-          "src/main/resources/assets/midnightlurker/models/item/destroytex_3_spawn_egg.json"
+          "src/main/resources/assets/midnightlurker/models/item/destroytex_3_spawn_egg.json",
+          "src/main/java/net/mcreator/midnightlurker/entity/Destroytex3Entity.java"
         ]
       }
     },
@@ -813,9 +817,9 @@
       "registry_name": "destroytex_4",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/Destroytex4Entity.java",
+          "src/main/resources/assets/midnightlurker/models/item/destroytex_4_spawn_egg.json",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/Destroytex4Renderer.java",
-          "src/main/resources/assets/midnightlurker/models/item/destroytex_4_spawn_egg.json"
+          "src/main/java/net/mcreator/midnightlurker/entity/Destroytex4Entity.java"
         ]
       }
     },
@@ -1029,11 +1033,12 @@
       "registry_name": "midnight_lurker_faker_aggro",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerFakerAggroEntity.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerFakerAggroLayer.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerFakerAggroModel.java",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerFakerAggroRenderer.java",
-          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_faker_aggro_spawn_egg.json"
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_faker_aggro_biome_modifier.json",
+          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerFakerAggroLayer.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerFakerAggroEntity.java",
+          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_faker_aggro_spawn_egg.json",
+          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerFakerAggroModel.java"
         ]
       }
     },
@@ -1100,11 +1105,12 @@
       "registry_name": "midnight_lurker_faker",
       "metadata": {
         "files": [
-          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_faker_spawn_egg.json",
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerFakerRenderer.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_faker_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerFakerEntity.java",
           "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerFakerModel.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerFakerLayer.java"
+          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerFakerLayer.java",
+          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_faker_spawn_egg.json",
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerFakerRenderer.java"
         ]
       }
     },
@@ -1172,10 +1178,11 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerFakerWatcherRenderer.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerFakerWatcherEntity.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerFakerWatcherLayer.java",
           "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerFakerWatcherModel.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_faker_watcher_biome_modifier.json",
           "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_faker_watcher_spawn_egg.json",
-          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerFakerWatcherLayer.java"
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerFakerWatcherEntity.java"
         ]
       }
     },
@@ -1239,8 +1246,9 @@
       "registry_name": "void_gateway",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/VoidGatewayEntity.java",
           "src/main/resources/assets/midnightlurker/models/item/void_gateway_spawn_egg.json",
+          "src/main/java/net/mcreator/midnightlurker/entity/VoidGatewayEntity.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/void_gateway_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/VoidGatewayRenderer.java",
           "src/main/java/net/mcreator/midnightlurker/entity/model/VoidGatewayModel.java"
         ]
@@ -1543,7 +1551,7 @@
       "registry_name": "insanityoverlay",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/InsanityoverlayOverlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/InsanityoverlayOverlay.java"
         ]
       }
     },
@@ -1602,8 +1610,8 @@
       "registry_name": "void_gateway_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/midnightlurker/particles/void_gateway_particle.json",
-          "src/main/java/net/mcreator/midnightlurker/client/particle/VoidGatewayParticleParticle.java"
+          "src/main/java/net/mcreator/midnightlurker/client/particle/VoidGatewayParticleParticle.java",
+          "src/main/resources/assets/midnightlurker/particles/void_gateway_particle.json"
         ]
       }
     },
@@ -1739,10 +1747,11 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerBackturnedRenderer.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerBackturnedEntity.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerBackturnedModel.java",
+          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_backturned_spawn_egg.json",
           "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerBackturnedLayer.java",
-          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_backturned_spawn_egg.json"
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_backturned_biome_modifier.json",
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerBackturnedEntity.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerBackturnedModel.java"
         ]
       }
     },
@@ -1813,11 +1822,12 @@
       "registry_name": "midnight_lurker_shadow_eyes",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerShadowEyesLayer.java",
-          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_shadow_eyes_spawn_egg.json",
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerShadowEyesEntity.java",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerShadowEyesRenderer.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerShadowEyesModel.java"
+          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerShadowEyesLayer.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_shadow_eyes_biome_modifier.json",
+          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerShadowEyesModel.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerShadowEyesEntity.java",
+          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_shadow_eyes_spawn_egg.json"
         ]
       }
     },
@@ -1830,10 +1840,11 @@
       "registry_name": "midnight_lurker_shadow",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerShadowEntity.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerShadowModel.java",
           "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_shadow_spawn_egg.json",
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerShadowRenderer.java"
+          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerShadowModel.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_shadow_biome_modifier.json",
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerShadowRenderer.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerShadowEntity.java"
         ]
       }
     },
@@ -1954,11 +1965,12 @@
       "registry_name": "midnight_lurker_unprovoked",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerUnprovokedEntity.java",
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerUnprovokedRenderer.java",
           "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerUnprovokedModel.java",
           "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerUnprovokedLayer.java",
-          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_unprovoked_spawn_egg.json"
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerUnprovokedRenderer.java",
+          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_unprovoked_spawn_egg.json",
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerUnprovokedEntity.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_unprovoked_biome_modifier.json"
         ]
       }
     },
@@ -2064,11 +2076,12 @@
       "registry_name": "midnight_lurker_runaway",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerRunawayRenderer.java",
           "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerRunawayLayer.java",
+          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_runaway_spawn_egg.json",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_runaway_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerRunawayEntity.java",
           "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerRunawayModel.java",
-          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_runaway_spawn_egg.json"
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerRunawayRenderer.java"
         ]
       }
     },
@@ -2215,10 +2228,10 @@
       "registry_name": "midnight_lurker_runtrue",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerRuntrueRenderer.java",
           "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerRuntrueModel.java",
           "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_runtrue_spawn_egg.json",
           "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerRuntrueEntity.java",
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerRuntrueRenderer.java",
           "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerRuntrueLayer.java"
         ]
       }
@@ -2232,11 +2245,12 @@
       "registry_name": "midnight_lurker_hider",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerHiderLayer.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_hider_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerHiderModel.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerHiderLayer.java",
+          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_hider_spawn_egg.json",
           "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerHiderEntity.java",
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerHiderRenderer.java",
-          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_hider_spawn_egg.json"
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerHiderRenderer.java"
         ]
       }
     },
@@ -2307,9 +2321,10 @@
       "registry_name": "midnight_lurker_shapeshifter",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerShapeshifterModel.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerShapeshifterEntity.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_shapeshifter_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerShapeshifterRenderer.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerShapeshifterEntity.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerShapeshifterModel.java",
           "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_shapeshifter_spawn_egg.json"
         ]
       }
@@ -2666,7 +2681,7 @@
       "registry_name": "insanityoverlay_9",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Insanityoverlay9Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Insanityoverlay9Overlay.java"
         ]
       }
     },
@@ -2679,7 +2694,7 @@
       "registry_name": "insanityoverlay_8",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Insanityoverlay8Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Insanityoverlay8Overlay.java"
         ]
       }
     },
@@ -2692,7 +2707,7 @@
       "registry_name": "insanityoverlay_7",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Insanityoverlay7Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Insanityoverlay7Overlay.java"
         ]
       }
     },
@@ -2705,7 +2720,7 @@
       "registry_name": "insanityoverlay_6",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Insanityoverlay6Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Insanityoverlay6Overlay.java"
         ]
       }
     },
@@ -2718,7 +2733,7 @@
       "registry_name": "insanityoverlay_5",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Insanityoverlay5Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Insanityoverlay5Overlay.java"
         ]
       }
     },
@@ -2731,7 +2746,7 @@
       "registry_name": "insanityoverlay_4",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Insanityoverlay4Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Insanityoverlay4Overlay.java"
         ]
       }
     },
@@ -2744,7 +2759,7 @@
       "registry_name": "insanityoverlay_3",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Insanityoverlay3Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Insanityoverlay3Overlay.java"
         ]
       }
     },
@@ -2757,7 +2772,7 @@
       "registry_name": "insanityoverlay_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Insanityoverlay2Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Insanityoverlay2Overlay.java"
         ]
       }
     },
@@ -2770,7 +2785,7 @@
       "registry_name": "insanityoverlay_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Insanityoverlay1Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Insanityoverlay1Overlay.java"
         ]
       }
     },
@@ -2783,8 +2798,8 @@
       "registry_name": "lurkerfaceparticle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/midnightlurker/particles/lurkerfaceparticle.json",
-          "src/main/java/net/mcreator/midnightlurker/client/particle/LurkerfaceparticleParticle.java"
+          "src/main/java/net/mcreator/midnightlurker/client/particle/LurkerfaceparticleParticle.java",
+          "src/main/resources/assets/midnightlurker/particles/lurkerfaceparticle.json"
         ]
       }
     },
@@ -3171,11 +3186,12 @@
       "registry_name": "midnight_lurker_stare",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerStareEntity.java",
           "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_stare_spawn_egg.json",
-          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerStareModel.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerStareLayer.java",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerStareRenderer.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerStareEntity.java"
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_stare_biome_modifier.json",
+          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerStareModel.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerStareLayer.java"
         ]
       }
     },
@@ -3349,7 +3365,7 @@
       "registry_name": "jumpscare_1_stage_0",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare1Stage0Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare1Stage0Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -3363,7 +3379,7 @@
       "registry_name": "jump_red_flash_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/JumpRedFlash1Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/JumpRedFlash1Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -3377,7 +3393,7 @@
       "registry_name": "jump_red_flash_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/JumpRedFlash2Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/JumpRedFlash2Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -3391,7 +3407,7 @@
       "registry_name": "jump_red_flash_3",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/JumpRedFlash3Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/JumpRedFlash3Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -3405,7 +3421,7 @@
       "registry_name": "jumpscare_12_stage_0",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare12Stage0Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare12Stage0Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4149,7 +4165,7 @@
       "registry_name": "jump_red_flash_4",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/JumpRedFlash4Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/JumpRedFlash4Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4163,7 +4179,7 @@
       "registry_name": "jump_red_flash_5",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/JumpRedFlash5Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/JumpRedFlash5Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4177,7 +4193,7 @@
       "registry_name": "jump_red_flash_6",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/JumpRedFlash6Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/JumpRedFlash6Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4212,7 +4228,7 @@
       "registry_name": "jump_red_flash_7",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/JumpRedFlash7Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/JumpRedFlash7Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4226,7 +4242,7 @@
       "registry_name": "jump_red_flash_8",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/JumpRedFlash8Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/JumpRedFlash8Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4240,7 +4256,7 @@
       "registry_name": "jump_red_flash_9",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/JumpRedFlash9Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/JumpRedFlash9Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4254,7 +4270,7 @@
       "registry_name": "jump_red_flash_10",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/JumpRedFlash10Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/JumpRedFlash10Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4352,7 +4368,7 @@
       "registry_name": "jumpscare_2_stage_0",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare2Stage0Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare2Stage0Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4366,7 +4382,7 @@
       "registry_name": "jumpscare_3_stage_0",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare3Stage0Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare3Stage0Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4468,7 +4484,7 @@
       "registry_name": "death_jumpscare",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/DeathJumpscareOverlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/DeathJumpscareOverlay.java"
         ]
       },
       "path": "~/JumpscareStages/DeathJumpscareFrames"
@@ -4629,7 +4645,7 @@
       "registry_name": "jumpscare_22_stage_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare22Stage1Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare22Stage1Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4643,7 +4659,7 @@
       "registry_name": "jumpscare_32_stage_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare32Stage2Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare32Stage2Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4657,7 +4673,7 @@
       "registry_name": "jumpscare_42_stage_3",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare42Stage3Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare42Stage3Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4671,7 +4687,7 @@
       "registry_name": "jumpscare_52_stage_4",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare52Stage4Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare52Stage4Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4685,7 +4701,7 @@
       "registry_name": "jumpscare_62_stage_5",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare62Stage5Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare62Stage5Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4699,7 +4715,7 @@
       "registry_name": "jumpscare_72_stage_6",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare72Stage6Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare72Stage6Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4713,7 +4729,7 @@
       "registry_name": "jumpscare_1_stage_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare1Stage1Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare1Stage1Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4727,7 +4743,7 @@
       "registry_name": "jumpscare_1_stage_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare1Stage2Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare1Stage2Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4741,7 +4757,7 @@
       "registry_name": "jumpscare_1_stage_3",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare1Stage3Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare1Stage3Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4755,7 +4771,7 @@
       "registry_name": "jumpscare_1_stage_4",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare1Stage4Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare1Stage4Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4769,7 +4785,7 @@
       "registry_name": "jumpscare_1_stage_5",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare1Stage5Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare1Stage5Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4783,7 +4799,7 @@
       "registry_name": "jumpscare_1_stage_6",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare1Stage6Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare1Stage6Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4797,7 +4813,7 @@
       "registry_name": "jumpscare_2_stage_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare2Stage1Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare2Stage1Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4811,7 +4827,7 @@
       "registry_name": "jumpscare_2_stage_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare2Stage2Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare2Stage2Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4825,7 +4841,7 @@
       "registry_name": "jumpscare_2_stage_3",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare2Stage3Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare2Stage3Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4839,7 +4855,7 @@
       "registry_name": "jumpscare_2_stage_4",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare2Stage4Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare2Stage4Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4853,7 +4869,7 @@
       "registry_name": "jumpscare_2_stage_5",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare2Stage5Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare2Stage5Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4867,7 +4883,7 @@
       "registry_name": "jumpscare_2_stage_6",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare2Stage6Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare2Stage6Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4881,7 +4897,7 @@
       "registry_name": "jumpscare_3_stage_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare3Stage1Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare3Stage1Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4895,7 +4911,7 @@
       "registry_name": "jumpscare_3_stage_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare3Stage2Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare3Stage2Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4909,7 +4925,7 @@
       "registry_name": "jumpscare_3_stage_3",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare3Stage3Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare3Stage3Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4923,7 +4939,7 @@
       "registry_name": "jumpscare_3_stage_4",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare3Stage4Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare3Stage4Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4937,7 +4953,7 @@
       "registry_name": "jumpscare_3_stage_5",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare3Stage5Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare3Stage5Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -4951,7 +4967,7 @@
       "registry_name": "jumpscare_3_stage_6",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/Jumpscare3Stage6Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/Jumpscare3Stage6Overlay.java"
         ]
       },
       "path": "~/JumpscareStages"
@@ -5419,11 +5435,12 @@
       "registry_name": "midnightlurker_ne",
       "metadata": {
         "files": [
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnightlurker_ne_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightlurkerNERenderer.java",
-          "src/main/resources/assets/midnightlurker/models/item/midnightlurker_ne_spawn_egg.json",
-          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightlurkerNELayer.java",
           "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightlurkerNEModel.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightlurkerNEEntity.java"
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightlurkerNEEntity.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightlurkerNELayer.java",
+          "src/main/resources/assets/midnightlurker/models/item/midnightlurker_ne_spawn_egg.json"
         ]
       }
     },
@@ -5536,11 +5553,12 @@
       "registry_name": "midnight_lurker_watcher",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerWatcherRenderer.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerWatcherEntity.java",
           "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerWatcherModel.java",
-          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_watcher_spawn_egg.json",
-          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerWatcherLayer.java"
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerWatcherEntity.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_watcher_biome_modifier.json",
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerWatcherRenderer.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerWatcherLayer.java",
+          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_watcher_spawn_egg.json"
         ]
       }
     },
@@ -5928,10 +5946,11 @@
       "registry_name": "void_hands",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/midnightlurker/entity/VoidHandsEntity.java",
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/VoidHandsRenderer.java",
           "src/main/java/net/mcreator/midnightlurker/entity/model/VoidHandsModel.java",
           "src/main/resources/assets/midnightlurker/models/item/void_hands_spawn_egg.json",
-          "src/main/java/net/mcreator/midnightlurker/entity/VoidHandsEntity.java",
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/VoidHandsRenderer.java"
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/void_hands_biome_modifier.json"
         ]
       }
     },
@@ -5960,8 +5979,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/midnightlurker/entity/InvisibleFootstepsEntity.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/model/InvisibleFootstepsModel.java",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/InvisibleFootstepsRenderer.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/model/InvisibleFootstepsModel.java"
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/invisible_footsteps_biome_modifier.json"
         ]
       }
     },
@@ -6057,8 +6077,9 @@
       "registry_name": "invisible_shadow",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/InvisibleShadowEntity.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/invisible_shadow_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/entity/model/InvisibleShadowModel.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/InvisibleShadowEntity.java",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/InvisibleShadowRenderer.java"
         ]
       }
@@ -6120,7 +6141,7 @@
       "registry_name": "lurk_static_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/LurkStatic1Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/LurkStatic1Overlay.java"
         ]
       }
     },
@@ -6133,7 +6154,7 @@
       "registry_name": "lurk_static_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/gui/LurkStatic2Overlay.java"
+          "src/main/java/net/mcreator/midnightlurker/client/screens/LurkStatic2Overlay.java"
         ]
       }
     },
@@ -6240,6 +6261,7 @@
       "registry_name": "invisible_static",
       "metadata": {
         "files": [
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/invisible_static_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/InvisibleStaticRenderer.java",
           "src/main/java/net/mcreator/midnightlurker/entity/model/InvisibleStaticModel.java",
           "src/main/java/net/mcreator/midnightlurker/entity/InvisibleStaticEntity.java"
@@ -6290,9 +6312,10 @@
       "registry_name": "invisible_lurker_footsteps",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/InvisibleLurkerFootstepsEntity.java",
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/InvisibleLurkerFootstepsRenderer.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/invisible_lurker_footsteps_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/entity/model/InvisibleLurkerFootstepsModel.java",
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/InvisibleLurkerFootstepsRenderer.java"
+          "src/main/java/net/mcreator/midnightlurker/entity/InvisibleLurkerFootstepsEntity.java"
         ]
       }
     },
@@ -6340,9 +6363,10 @@
       "registry_name": "invisible_cave_sounds",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/InvisibleCaveSoundsRenderer.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/invisible_cave_sounds_biome_modifier.json",
+          "src/main/java/net/mcreator/midnightlurker/entity/model/InvisibleCaveSoundsModel.java",
           "src/main/java/net/mcreator/midnightlurker/entity/InvisibleCaveSoundsEntity.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/model/InvisibleCaveSoundsModel.java"
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/InvisibleCaveSoundsRenderer.java"
         ]
       }
     },
@@ -6448,11 +6472,12 @@
       "registry_name": "midnight_lurker_creep",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerCreepEntity.java",
           "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightLurkerCreepModel.java",
           "src/main/java/net/mcreator/midnightlurker/entity/layer/MidnightLurkerCreepLayer.java",
-          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_creep_spawn_egg.json",
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerCreepRenderer.java"
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_lurker_creep_biome_modifier.json",
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightLurkerCreepRenderer.java",
+          "src/main/java/net/mcreator/midnightlurker/entity/MidnightLurkerCreepEntity.java",
+          "src/main/resources/assets/midnightlurker/models/item/midnight_lurker_creep_spawn_egg.json"
         ]
       }
     },
@@ -6558,9 +6583,10 @@
       "registry_name": "midnight_phantom_head",
       "metadata": {
         "files": [
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/midnight_phantom_head_biome_modifier.json",
+          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightPhantomHeadModel.java",
           "src/main/java/net/mcreator/midnightlurker/entity/MidnightPhantomHeadEntity.java",
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightPhantomHeadRenderer.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/model/MidnightPhantomHeadModel.java"
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/MidnightPhantomHeadRenderer.java"
         ]
       }
     },
@@ -6702,9 +6728,10 @@
       "registry_name": "invisible_animal_killer",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/midnightlurker/client/renderer/InvisibleAnimalKillerRenderer.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/invisible_animal_killer_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/entity/InvisibleAnimalKillerEntity.java",
-          "src/main/java/net/mcreator/midnightlurker/entity/model/InvisibleAnimalKillerModel.java"
+          "src/main/java/net/mcreator/midnightlurker/entity/model/InvisibleAnimalKillerModel.java",
+          "src/main/java/net/mcreator/midnightlurker/client/renderer/InvisibleAnimalKillerRenderer.java"
         ]
       }
     },
@@ -6808,6 +6835,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/midnightlurker/client/renderer/ShapeshifterPigRenderer.java",
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/shapeshifter_pig_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/entity/ShapeshifterPigEntity.java"
         ]
       }
@@ -6821,6 +6849,7 @@
       "registry_name": "shape_shifter_cow",
       "metadata": {
         "files": [
+          "src/main/resources/data/midnightlurker/forge/biome_modifier/shape_shifter_cow_biome_modifier.json",
           "src/main/java/net/mcreator/midnightlurker/client/renderer/ShapeShifterCowRenderer.java",
           "src/main/java/net/mcreator/midnightlurker/entity/ShapeShifterCowEntity.java"
         ]
@@ -7089,6 +7118,32 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "AmnesiaShowInInv",
+      "type": "potioneffect",
+      "sortid": 418,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amnesia_show_in_inv",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/midnightlurker/potion/AmnesiaShowInInvMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "InsanityShowinInv",
+      "type": "potioneffect",
+      "sortid": 419,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "insanity_showin_inv",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/midnightlurker/potion/InsanityShowinInvMobEffect.java"
         ]
       }
     }
@@ -7539,9 +7594,9 @@
       "subtitles.lurkerinvisiblejumpscare": "",
       "entity.midnightlurker.midnight_lurker_hider": "Midnight Lurker",
       "item.midnightlurkeroverhauled.midnight_lurker_ne_spawn_egg": "Midnight Lurker Spawn Egg",
-      "gui.midnightlurker.chasetimerfortesting.label_jumpscare_number": "Jumpscare Number:",
-      "gui.midnightlurkeroverhauled.chasetimerfortesting.label_void_gateway_random_number": "Void Gateway Random Number",
       "subtitles.lurkerchase2": "",
+      "gui.midnightlurkeroverhauled.chasetimerfortesting.label_void_gateway_random_number": "Void Gateway Random Number",
+      "gui.midnightlurker.chasetimerfortesting.label_jumpscare_number": "Jumpscare Number:",
       "entity.midnightlurkeroverhauled.midnight_lurkertpose": "Midnight Lurker",
       "entity.midnightlurker.midnight_lurker_aggressive": "Midnight Lurker",
       "item.midnightlurker.midnight_phantom_head_spawn_egg": "Midnight Lurker Spawn Egg",
@@ -7607,9 +7662,11 @@
       "subtitles.lurkerbreakingblock": "",
       "subtitles.voidhands_death": "",
       "entity.midnightlurker.destroytex": "destroytex1",
+      "effect.midnightlurker.amnesia_show_in_inv": "Minnisleysi",
       "entity.midnightlurker.spookyambienceentity": "Midnight Lurker",
       "entity.midnightlurkeroverhauled.midnight_lurker_ne": "Midnight Lurker",
       "subtitles.static": "",
+      "effect.midnightlurker.insanity_showin_inv": "Geðveiki",
       "gui.midnightlurker.chasetimerfortesting.label_insanity_stage": "Insanity Stage:",
       "subtitles.lurkerchasesteps": "",
       "subtitles.lurkerprefinalbreak": "",
@@ -7762,9 +7819,11 @@
       "subtitles.lurkerbreakingblock": "",
       "subtitles.voidhands_death": "",
       "entity.midnightlurker.destroytex": "destroytex1",
+      "effect.midnightlurker.amnesia_show_in_inv": "Amnesia",
       "entity.midnightlurker.spookyambienceentity": "Lurker di mezzanotte",
       "entity.midnightlurkeroverhauled.midnight_lurker_ne": "Lurker di mezzanotte",
       "subtitles.static": "",
+      "effect.midnightlurker.insanity_showin_inv": "Insanity",
       "gui.midnightlurker.chasetimerfortesting.label_insanity_stage": "Insanity Stage:",
       "subtitles.lurkerchasesteps": "",
       "subtitles.lurkerprefinalbreak": "",
@@ -7855,23 +7914,23 @@
       "entity.midnightlurkeroverhauled.midnight_lurkertpose": "Бабай",
       "entity.midnightlurker.midnight_lurker_aggressive": "Бабай",
       "item.midnightlurker.midnight_phantom_head_spawn_egg": "Яйцо призыва Бабая",
-      "entity.midnightlurker.shapeshifter_pig": "Бабай",
+      "entity.midnightlurker.shapeshifter_pig": "Свинья",
       "item.midnightlurkeroverhauled.midnight_lurker_stalking_spawn_egg": "Яйцо призыва Бабая",
       "entity.midnightlurker.destroytex_3": "Разрушение",
       "entity.midnightlurker.destroytex_2": "Разрушение",
       "entity.midnightlurker.midnight_lurkertpose": "Бабай",
       "entity.midnightlurker.destroytex_4": "Разрушение",
       "entity.midnightlurker.midnight_phantom_head": "Бабай",
-      "item.midnightlurker.invisible_animal_killer_spawn_egg": "InvisibleStatic Spawn Egg",
+      "item.midnightlurker.invisible_animal_killer_spawn_egg": "Яйцо призыва невидимого убийцы",
       "entity.midnightlurker.midnight_lurker_shadow": "Бабай",
-      "item.midnightlurker.invisible_cave_sounds_spawn_egg": "InvisibleFootsteps Spawn Egg",
+      "item.midnightlurker.invisible_cave_sounds_spawn_egg": "Яйцо призыва невидимых пещерных звуков",
       "gui.midnightlurker.chasetimerfortesting.label_void_gateway_random_number": "Случайное число врат пустоты",
       "subtitles.lurkerdistantscream": "",
       "item.midnightlurker.shapeshifter_pig_spawn_egg": "Яйцо призыва Бабая",
       "entity.midnightlurker.midnight_lurker_runaway": "Бабай",
       "gui.midnightlurkeroverhauled.chasetimerfortesting.label_jumpscare_number": "Значение пугающего экрана:",
       "entity.midnightlurker.void_hands": "Руки пустоты",
-      "item.midnightlurker.invisible_shadow_spawn_egg": "InvisibleFootsteps Spawn Egg",
+      "item.midnightlurker.invisible_shadow_spawn_egg": "Яйцо призыва невидимой тени",
       "entity.midnightlurker.void_gateway": "Врата пустоты",
       "entity.midnightlurker.midnight_lurker_faker_watcher": "Бабай",
       "effect.midnightlurker.amnesia": "Амнезия",
@@ -7879,8 +7938,8 @@
       "item.midnightlurkeroverhauled.destroytex_3_spawn_egg": "Яйцо призыва текстуры разрушения 3",
       "item.midnightlurker.midnight_lurker_shapeshifter_spawn_egg": "Яйцо призыва Бабая",
       "item.midnightlurker.midnight_lurker_faker_watcher_spawn_egg": "Яйцо призыва Бабая",
-      "entity.midnightlurker.invisible_animal_killer": "InvisibleStatic",
-      "entity.midnightlurker.invisible_static": "InvisibleFootsteps",
+      "entity.midnightlurker.invisible_animal_killer": "Невидимый убийца",
+      "entity.midnightlurker.invisible_static": "Невидимая неподвижность",
       "item.midnightlurkeroverhauled.midnight_lurker_faker_watcher_spawn_egg": "Яйцо призыва Бабая",
       "subtitles.lurkerdeath": "",
       "subtitles.voidhands_hurt": "",
@@ -7888,7 +7947,7 @@
       "item.midnightlurker.midnight_lurker_runaway_spawn_egg": "Яйцо призыва Бабая",
       "item.midnightlurker.midnight_lurker_seen_angressive_spawn_egg": "Яйцо призыва Бабая",
       "entity.midnightlurker.midnight_lurker_unprovoked": "Бабай",
-      "effect.midnightlurker.insanity_faces": "Безумие",
+      "effect.midnightlurker.insanity_faces": "Лица безумия",
       "item.midnightlurker.destroytex_spawn_egg": "Яйцо призыва текстуры разрушения 1",
       "entity.midnightlurkeroverhauled.spookyambienceentity": "Бабай-призрак",
       "subtitles.lurkerscream": "",
@@ -7905,25 +7964,27 @@
       "item.midnightlurkeroverhauled.midnight_lurker_seen_angressive_spawn_egg": "Яйцо призыва Бабая",
       "item.midnightlurkeroverhauled.midnight_lurker_aggressive_spawn_egg": "Яйцо призыва Бабая",
       "entity.midnightlurkeroverhauled.midnight_lurker_faker_aggro": "Бабай",
-      "entity.midnightlurker.invisible_lurker_footsteps": "InvisibleFootsteps",
+      "entity.midnightlurker.invisible_lurker_footsteps": "Невидимые шаги Бабая",
       "entity.midnightlurkeroverhauled.midnight_lurker_faker": "Бабай",
       "entity.midnightlurkeroverhauled.midnight_lurker_faker_watcher": "Бабай",
       "gui.midnightlurker.chasetimerfortesting.label_chase_timer": "Таймер погони:",
       "item.midnightlurkeroverhauled.midnight_lurker_invisible_spawn_egg": "Яйцо призыва Бабая",
       "subtitles.spookyambience": "",
       "item.midnightlurker.destroytex_4_spawn_egg": "Яйцо призыва текстуры разрушения 4",
-      "item.midnightlurker.invisible_lurker_footsteps_spawn_egg": "InvisibleFootsteps Spawn Egg",
+      "item.midnightlurker.invisible_lurker_footsteps_spawn_egg": "Яйцо призыва невидимых шагов Бабая",
       "item.midnightlurker.midnight_lurkertpose_spawn_egg": "Яйцо призыва Бабая",
       "subtitles.lurkerbreakingblock": "",
       "subtitles.voidhands_death": "",
       "entity.midnightlurker.destroytex": "Разрушение",
+      "effect.midnightlurker.amnesia_show_in_inv": "Амнезия",
       "entity.midnightlurker.spookyambienceentity": "Бабай",
       "entity.midnightlurkeroverhauled.midnight_lurker_ne": "Бабай",
       "subtitles.static": "",
+      "effect.midnightlurker.insanity_showin_inv": "Безумие",
       "gui.midnightlurker.chasetimerfortesting.label_insanity_stage": "Стадия безумия:",
       "subtitles.lurkerchasesteps": "",
       "subtitles.lurkerprefinalbreak": "",
-      "entity.midnightlurker.invisible_footsteps": "voidgateway",
+      "entity.midnightlurker.invisible_footsteps": "Невидимые шаги",
       "entity.midnightlurkeroverhauled.midnight_lurker_stalking": "Бабай",
       "item.midnightlurker.midnight_lurker_invisible_spawn_egg": "Яйцо призыва Бабая",
       "item.midnightlurker.invisible_static_spawn_egg": "InvisibleFootsteps Spawn Egg",
@@ -7936,7 +7997,7 @@
       "item.midnightlurkeroverhauled.midnight_lurker_faker_spawn_egg": "Яйцо призыва Бабая",
       "subtitles.lurker_taunt": "",
       "gui.midnightlurkeroverhauled.chasetimerfortesting.label_insanity_stage": "Стадия безумия:",
-      "entity.midnightlurker.shape_shifter_cow": "Бабай",
+      "entity.midnightlurker.shape_shifter_cow": "Корова",
       "item.midnightlurker.spookyambienceentity_spawn_egg": "Яйцо призыва Бабая",
       "item.midnightlurker.void_gateway_spawn_egg": "Яйцо призыва врат пустоты",
       "entity.midnightlurker.midnight_lurker_shadow_eyes": "Бабай",
@@ -7946,25 +8007,25 @@
       "subtitles.lurkerfootsteps": "",
       "item.midnightlurker.midnightlurker_ne_spawn_egg": "Яйцо призыва Бабая",
       "item.midnightlurker.midnight_lurker_stare_spawn_egg": "Яйцо призыва Бабая",
-      "entity.midnightlurker.invisible_shadow": "InvisibleFootsteps",
+      "entity.midnightlurker.invisible_shadow": "Невидимая тень",
       "item.midnightlurker.midnight_lurker_faker_spawn_egg": "Яйцо призыва Бабая",
       "gui.midnightlurkeroverhauled.chasetimerfortesting.label_jumpscare_animation": "Значение пугающего экрана:",
-      "entity.midnightlurker.midnight_lurker_shapeshifter": "Бабай",
-      "entity.midnightlurker.invisible_cave_sounds": "InvisibleFootsteps",
+      "entity.midnightlurker.midnight_lurker_shapeshifter": "Крестьянин",
+      "entity.midnightlurker.invisible_cave_sounds": "Невидимые пещерные звуки",
       "subtitles.lurkerambient": "",
-      "item.midnightlurker.invisible_footsteps_spawn_egg": "voidgateway Spawn Egg",
+      "item.midnightlurker.invisible_footsteps_spawn_egg": "Яйцо призыва невидимых шагов",
       "item.midnightlurker.midnight_lurker_faker_aggro_spawn_egg": "Яйцо призыва Бабая",
-      "effect.midnightlurker.static_effect": "Static Effect",
+      "effect.midnightlurker.static_effect": "Статический эффект",
       "item.midnightlurkeroverhauled.midnight_lurker_spawn_egg": "Яйцо призыва Бабая",
       "item.midnightlurker.destroytex_2_spawn_egg": "Яйцо призыва текстуры разрушения 2",
       "item.midnightlurkeroverhauled.destroytex_spawn_egg": "Яйцо призыва текстуры разрушения 1",
       "item.midnightlurkeroverhauled.midnight_lurker_faker_aggro_spawn_egg": "Яйцо призыва Бабая",
       "entity.midnightlurker.midnight_lurker_faker_aggro": "Бабай",
-      "item.midnightlurker.midnight_lurker_creep_spawn_egg": "Midnight Lurker Spawn Egg",
+      "item.midnightlurker.midnight_lurker_creep_spawn_egg": "Яйцо призыва Бабая",
       "subtitles.lurkerdeathjumpscare": "",
       "gui.midnightlurker.chasetimerfortesting.label_insanity_timer": "Таймер безумия:",
       "subtitles.phantom_head_scream": "",
-      "entity.midnightlurker.midnight_lurker_creep": "Midnight Lurker",
+      "entity.midnightlurker.midnight_lurker_creep": "Бабай",
       "item.midnightlurker.destroytex_3_spawn_egg": "Яйцо призыва текстуры разрушения 3",
       "gui.midnightlurker.chasetimerfortesting.label_jumpscare_animation": "Анимация пугающего экрана:",
       "item.midnightlurker.midnight_lurker_hider_spawn_egg": "Яйцо призыва Бабая",
@@ -8072,9 +8133,11 @@
       "subtitles.lurkerbreakingblock": "",
       "subtitles.voidhands_death": "",
       "entity.midnightlurker.destroytex": "destroytex1",
+      "effect.midnightlurker.amnesia_show_in_inv": "Amnesia",
       "entity.midnightlurker.spookyambienceentity": "spookyambienceentity",
       "entity.midnightlurkeroverhauled.midnight_lurker_ne": "Midnight Lurker",
       "subtitles.static": "",
+      "effect.midnightlurker.insanity_showin_inv": "Insanity",
       "gui.midnightlurker.chasetimerfortesting.label_insanity_stage": "Insanity Stage:",
       "subtitles.lurkerchasesteps": "",
       "subtitles.lurkerprefinalbreak": "",
@@ -8230,9 +8293,11 @@
       "subtitles.lurkerbreakingblock": "",
       "subtitles.voidhands_death": "",
       "entity.midnightlurker.destroytex": "destroytex1",
+      "effect.midnightlurker.amnesia_show_in_inv": "Amnesia",
       "entity.midnightlurker.spookyambienceentity": "Acechador de medianoche",
       "entity.midnightlurkeroverhauled.midnight_lurker_ne": "Acechador de medianoche",
       "subtitles.static": "",
+      "effect.midnightlurker.insanity_showin_inv": "Insanity",
       "gui.midnightlurker.chasetimerfortesting.label_insanity_stage": "Insanity Stage:",
       "subtitles.lurkerchasesteps": "",
       "subtitles.lurkerprefinalbreak": "",
@@ -8317,9 +8382,9 @@
       "subtitles.lurkerinvisiblejumpscare": "",
       "entity.midnightlurker.midnight_lurker_hider": "Rôdeur de minuit",
       "item.midnightlurkeroverhauled.midnight_lurker_ne_spawn_egg": "Oeuf d\u0027apparition du rôdeur de minuit",
-      "subtitles.lurkerchase2": "",
-      "gui.midnightlurkeroverhauled.chasetimerfortesting.label_void_gateway_random_number": "Void Gateway Random Number",
       "gui.midnightlurker.chasetimerfortesting.label_jumpscare_number": "Jumpscare Number:",
+      "gui.midnightlurkeroverhauled.chasetimerfortesting.label_void_gateway_random_number": "Void Gateway Random Number",
+      "subtitles.lurkerchase2": "",
       "entity.midnightlurkeroverhauled.midnight_lurkertpose": "Rôdeur de minuit",
       "entity.midnightlurker.midnight_lurker_aggressive": "Rôdeur de minuit",
       "item.midnightlurker.midnight_phantom_head_spawn_egg": "Oeuf d\u0027apparition du rôdeur de minuit",
@@ -8385,9 +8450,11 @@
       "subtitles.lurkerbreakingblock": "",
       "subtitles.voidhands_death": "",
       "entity.midnightlurker.destroytex": "destroytex1",
+      "effect.midnightlurker.amnesia_show_in_inv": "Amnésie",
       "entity.midnightlurker.spookyambienceentity": "Rôdeur de minuit",
       "entity.midnightlurkeroverhauled.midnight_lurker_ne": "Rôdeur de minuit",
       "subtitles.static": "",
+      "effect.midnightlurker.insanity_showin_inv": "Insanity",
       "gui.midnightlurker.chasetimerfortesting.label_insanity_stage": "Insanity Stage:",
       "subtitles.lurkerchasesteps": "",
       "subtitles.lurkerprefinalbreak": "",
@@ -8472,9 +8539,9 @@
       "subtitles.lurkerinvisiblejumpscare": "",
       "entity.midnightlurker.midnight_lurker_hider": "ミッドナイト・ラーカー",
       "item.midnightlurkeroverhauled.midnight_lurker_ne_spawn_egg": "ミッドナイトラーカーのスポーンエッグ",
-      "subtitles.lurkerchase2": "",
-      "gui.midnightlurkeroverhauled.chasetimerfortesting.label_void_gateway_random_number": "Void Gateway Random Number",
       "gui.midnightlurker.chasetimerfortesting.label_jumpscare_number": "Jumpscare Number:",
+      "gui.midnightlurkeroverhauled.chasetimerfortesting.label_void_gateway_random_number": "Void Gateway Random Number",
+      "subtitles.lurkerchase2": "",
       "entity.midnightlurkeroverhauled.midnight_lurkertpose": "ミッドナイト・ラーカー",
       "entity.midnightlurker.midnight_lurker_aggressive": "ミッドナイト・ラーカー",
       "item.midnightlurker.midnight_phantom_head_spawn_egg": "ミッドナイトラーカーのスポーンエッグ",
@@ -8540,9 +8607,11 @@
       "subtitles.lurkerbreakingblock": "",
       "subtitles.voidhands_death": "",
       "entity.midnightlurker.destroytex": "destroytex1",
+      "effect.midnightlurker.amnesia_show_in_inv": "健忘症",
       "entity.midnightlurker.spookyambienceentity": "ミッドナイト・ラーカー",
       "entity.midnightlurkeroverhauled.midnight_lurker_ne": "ミッドナイト・ラーカー",
       "subtitles.static": "",
+      "effect.midnightlurker.insanity_showin_inv": "Insanity",
       "gui.midnightlurker.chasetimerfortesting.label_insanity_stage": "Insanity Stage:",
       "subtitles.lurkerchasesteps": "",
       "subtitles.lurkerprefinalbreak": "",
@@ -8627,9 +8696,9 @@
       "subtitles.lurkerinvisiblejumpscare": "",
       "entity.midnightlurker.midnight_lurker_hider": "Middernacht Loer",
       "item.midnightlurkeroverhauled.midnight_lurker_ne_spawn_egg": "Middernacht Lurker Spawn-ei",
-      "subtitles.lurkerchase2": "",
-      "gui.midnightlurkeroverhauled.chasetimerfortesting.label_void_gateway_random_number": "Void Gateway Random Number",
       "gui.midnightlurker.chasetimerfortesting.label_jumpscare_number": "Jumpscare Number:",
+      "gui.midnightlurkeroverhauled.chasetimerfortesting.label_void_gateway_random_number": "Void Gateway Random Number",
+      "subtitles.lurkerchase2": "",
       "entity.midnightlurkeroverhauled.midnight_lurkertpose": "Middernacht Loer",
       "entity.midnightlurker.midnight_lurker_aggressive": "Middernacht Loer",
       "item.midnightlurker.midnight_phantom_head_spawn_egg": "Middernacht Lurker Spawn-ei",
@@ -8695,9 +8764,11 @@
       "subtitles.lurkerbreakingblock": "",
       "subtitles.voidhands_death": "",
       "entity.midnightlurker.destroytex": "destroytex1",
+      "effect.midnightlurker.amnesia_show_in_inv": "Geheugenverlies",
       "entity.midnightlurker.spookyambienceentity": "Middernacht Loer",
       "entity.midnightlurkeroverhauled.midnight_lurker_ne": "Middernacht Loer",
       "subtitles.static": "",
+      "effect.midnightlurker.insanity_showin_inv": "Insanity",
       "gui.midnightlurker.chasetimerfortesting.label_insanity_stage": "Insanity Stage:",
       "subtitles.lurkerchasesteps": "",
       "subtitles.lurkerprefinalbreak": "",
@@ -8782,9 +8853,9 @@
       "subtitles.lurkerinvisiblejumpscare": "",
       "entity.midnightlurker.midnight_lurker_hider": "Mitternachtslurker",
       "item.midnightlurkeroverhauled.midnight_lurker_ne_spawn_egg": "Mitternachtslurker-Spawn-Ei",
-      "subtitles.lurkerchase2": "",
-      "gui.midnightlurkeroverhauled.chasetimerfortesting.label_void_gateway_random_number": "Void Gateway Random Number",
       "gui.midnightlurker.chasetimerfortesting.label_jumpscare_number": "Jumpscare Number:",
+      "gui.midnightlurkeroverhauled.chasetimerfortesting.label_void_gateway_random_number": "Void Gateway Random Number",
+      "subtitles.lurkerchase2": "",
       "entity.midnightlurkeroverhauled.midnight_lurkertpose": "Mitternachtslurker",
       "entity.midnightlurker.midnight_lurker_aggressive": "Mitternachtslurker",
       "item.midnightlurker.midnight_phantom_head_spawn_egg": "Mitternachtslurker-Spawn-Ei",
@@ -8850,9 +8921,11 @@
       "subtitles.lurkerbreakingblock": "",
       "subtitles.voidhands_death": "",
       "entity.midnightlurker.destroytex": "destroytex1",
+      "effect.midnightlurker.amnesia_show_in_inv": "Amnesie",
       "entity.midnightlurker.spookyambienceentity": "Mitternachtslurker",
       "entity.midnightlurkeroverhauled.midnight_lurker_ne": "Mitternachtslurker",
       "subtitles.static": "",
+      "effect.midnightlurker.insanity_showin_inv": "Insanity",
       "gui.midnightlurker.chasetimerfortesting.label_insanity_stage": "Insanity Stage:",
       "subtitles.lurkerchasesteps": "",
       "subtitles.lurkerprefinalbreak": "",
@@ -8937,9 +9010,9 @@
       "subtitles.lurkerinvisiblejumpscare": "",
       "entity.midnightlurker.midnight_lurker_hider": "Espreitador da meia-noite",
       "item.midnightlurkeroverhauled.midnight_lurker_ne_spawn_egg": "Ovo de desova do Espreitador da Meia-Noite",
-      "subtitles.lurkerchase2": "",
-      "gui.midnightlurkeroverhauled.chasetimerfortesting.label_void_gateway_random_number": "Void Gateway Random Number",
       "gui.midnightlurker.chasetimerfortesting.label_jumpscare_number": "Jumpscare Number:",
+      "gui.midnightlurkeroverhauled.chasetimerfortesting.label_void_gateway_random_number": "Void Gateway Random Number",
+      "subtitles.lurkerchase2": "",
       "entity.midnightlurkeroverhauled.midnight_lurkertpose": "Espreitador da meia-noite",
       "entity.midnightlurker.midnight_lurker_aggressive": "Espreitador da meia-noite",
       "item.midnightlurker.midnight_phantom_head_spawn_egg": "Ovo de desova do Espreitador da Meia-Noite",
@@ -9005,9 +9078,11 @@
       "subtitles.lurkerbreakingblock": "",
       "subtitles.voidhands_death": "",
       "entity.midnightlurker.destroytex": "destroytex1",
+      "effect.midnightlurker.amnesia_show_in_inv": "Amnésia",
       "entity.midnightlurker.spookyambienceentity": "Espreitador da meia-noite",
       "entity.midnightlurkeroverhauled.midnight_lurker_ne": "Espreitador da meia-noite",
       "subtitles.static": "",
+      "effect.midnightlurker.insanity_showin_inv": "Insanity",
       "gui.midnightlurker.chasetimerfortesting.label_insanity_stage": "Insanity Stage:",
       "subtitles.lurkerchasesteps": "",
       "subtitles.lurkerprefinalbreak": "",
@@ -9105,7 +9180,7 @@
   "workspaceSettings": {
     "modid": "midnightlurker",
     "modName": "The Midnight Lurker",
-    "version": "2.9.8",
+    "version": "3.1.0",
     "description": "A small mod that adds a new horrifying entity to Minecraft.",
     "author": "Voxla",
     "websiteURL": "https://modrinth.com/mod/the-midnight-lurker - https://www.curseforge.com/minecraft/mc-mods/the-midnight-lurker",
@@ -9119,7 +9194,7 @@
     "mcreatorDependencies": [
       "geckolib"
     ],
-    "currentGenerator": "forge-1.18.2",
+    "currentGenerator": "forge-1.19.4",
     "credits": "Mod made by Voxla - Created using mod maker MCreator - Legacy music in the mod from Slender the Arrival - Most Lurker sounds by TH34N0M4LY/Z3R0TW0",
     "modElementsPackage": "net.mcreator.midnightlurker",
     "lockBaseModFiles": false

@@ -597,6 +597,21 @@
         "value": "Blocks.CHERRY_PRESSURE_PLATE"
       },
       {
+        "value": "Blocks.BAMBOO_SIGN"
+      },
+      {
+        "value": "Blocks.BAMBOO_WALL_SIGN"
+      },
+      {
+        "value": "Blocks.BAMBOO_BUTTON"
+      },
+      {
+        "value": "Blocks.BAMBOO_PRESSURE_PLATE"
+      },
+      {
+        "value": "Blocks.BAMBOO"
+      },
+      {
         "value": "Blocks.STANDING_SIGN"
       },
       {
@@ -615,9 +630,6 @@
         "value": "Blocks.DARK_OAK_SIGN"
       },
       {
-        "value": "Blocks.BAMBOO_SIGN"
-      },
-      {
         "value": "Blocks.WALL_SIGN"
       },
       {
@@ -634,9 +646,6 @@
       },
       {
         "value": "Blocks.DARK_OAK_WALL_SIGN"
-      },
-      {
-        "value": "Blocks.BAMBOO_WALL_SIGN"
       },
       {
         "value": "Blocks.OAK_HANGING_SIGN"
