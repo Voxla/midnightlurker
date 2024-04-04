@@ -51,7 +51,7 @@ public class LurkerconfigProcedure {
 			mainjsonobject.addProperty("insanity_countdown_time", 3);
 			mainjsonobject.addProperty("the insanity countdown time determines how long the timer is for insanity. 1 is 5mins, 2 is 10mins, 3 is 20mins, and 4 is 30mins.", 0);
 			mainjsonobject.addProperty("lurker_invulnerable", false);
-			mainjsonobject.addProperty("nether_lurker_spawn_rate", 4);
+			mainjsonobject.addProperty("nether_lurker_spawn_rate", 2);
 			mainjsonobject.addProperty("the nether spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest.", 0);
 			mainjsonobject.addProperty("amnesia", true);
 			mainjsonobject.addProperty("invisible_entities_spawning", true);

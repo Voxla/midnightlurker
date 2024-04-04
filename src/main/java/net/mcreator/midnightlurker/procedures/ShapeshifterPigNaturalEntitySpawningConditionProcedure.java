@@ -9,7 +9,7 @@ import net.mcreator.midnightlurker.entity.ShapeshifterPigEntity;
 
 public class ShapeshifterPigNaturalEntitySpawningConditionProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {
-		if (!world.getEntitiesOfClass(Pig.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty() && !(!world.getEntitiesOfClass(ShapeshifterPigEntity.class, AABB.ofSize(new Vec3(x, y, z), 200, 200, 200), e -> true).isEmpty())) {
+		if (!world.getEntitiesOfClass(Pig.class, AABB.ofSize(new Vec3(x, y, z), 400, 400, 400), e -> true).isEmpty() && !(!world.getEntitiesOfClass(ShapeshifterPigEntity.class, AABB.ofSize(new Vec3(x, y, z), 400, 400, 400), e -> true).isEmpty())) {
 			return true;
 		}
 		return false;

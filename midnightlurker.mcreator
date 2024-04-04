@@ -7146,6 +7146,45 @@
           "src/main/java/net/mcreator/midnightlurker/potion/InsanityShowinInvMobEffect.java"
         ]
       }
+    },
+    {
+      "name": "MidnightLurkerRuntrueEntityIsHurt",
+      "type": "procedure",
+      "sortid": 420,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "midnight_lurker_runtrue_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/midnightlurker/procedures/MidnightLurkerRuntrueEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -9160,7 +9199,7 @@
   "workspaceSettings": {
     "modid": "midnightlurker",
     "modName": "The Midnight Lurker",
-    "version": "3.1.1",
+    "version": "3.1.9",
     "description": "A small mod that adds a new horrifying entity to Minecraft.",
     "author": "Voxla",
     "websiteURL": "https://modrinth.com/mod/the-midnight-lurker - https://www.curseforge.com/minecraft/mc-mods/the-midnight-lurker",

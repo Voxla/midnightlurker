@@ -582,19 +582,7 @@
         "value": "Blocks.PINK_PETALS"
       },
       {
-        "value": "Blocks.CHERRY_SAPLING"
-      },
-      {
-        "value": "Blocks.CHERRY_SIGN"
-      },
-      {
-        "value": "Blocks.CHERRY_WALL_SIGN"
-      },
-      {
-        "value": "Blocks.CHERRY_BUTTON"
-      },
-      {
-        "value": "Blocks.CHERRY_PRESSURE_PLATE"
+        "value": "Blocks.PITCHER_PLANT"
       },
       {
         "value": "Blocks.BAMBOO_SIGN"
@@ -610,6 +598,21 @@
       },
       {
         "value": "Blocks.BAMBOO"
+      },
+      {
+        "value": "Blocks.CHERRY_SAPLING"
+      },
+      {
+        "value": "Blocks.CHERRY_SIGN"
+      },
+      {
+        "value": "Blocks.CHERRY_WALL_SIGN"
+      },
+      {
+        "value": "Blocks.CHERRY_BUTTON"
+      },
+      {
+        "value": "Blocks.CHERRY_PRESSURE_PLATE"
       },
       {
         "value": "Blocks.STANDING_SIGN"

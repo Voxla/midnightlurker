@@ -103,7 +103,7 @@
       "name": "MidnightLurkerEntityDies"
     },
     "whenMobIsHurt": {
-      "name": "MidnightLurkerAggressiveEntityIsHurt"
+      "name": "MidnightLurkerRuntrueEntityIsHurt"
     },
     "onMobTickUpdate": {
       "name": "MidnightLurkerRuntrueOnEntityTickUpdate"

@@ -35,28 +35,33 @@ public class MidnightLurkerSeenAngressiveOnEntityTickUpdateProcedure {
 		String found_entity_name = "";
 		boolean entity_found = false;
 		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 20, 20, 20), e -> true).isEmpty()) {
-			MidnightlurkerMod.queueServerWork(10, () -> {
-				if (entity.getPersistentData().getDouble("SoundActivate") < 3 && !world.getEntitiesOfClass(MidnightLurkerSeenAngressiveEntity.class, AABB.ofSize(new Vec3(x, y, z), 6, 6, 6), e -> true).isEmpty()) {
-					entity.getPersistentData().putDouble("SoundActivate", (entity.getPersistentData().getDouble("SoundActivate") + 1));
+			if (entity.getPersistentData().getBoolean("DespawnActivated") == false) {
+				entity.getPersistentData().putBoolean("DespawnActivated", true);
+			}
+		}
+		if (entity.getPersistentData().getBoolean("DespawnActivated") == true) {
+			if (entity.getPersistentData().getDouble("DespawnTimer") == 0) {
+				entity.getPersistentData().putDouble("DespawnTimer", 20);
+			} else {
+				entity.getPersistentData().putDouble("DespawnTimer", (entity.getPersistentData().getDouble("DespawnTimer") - 1));
+			}
+		}
+		if (entity.getPersistentData().getDouble("DespawnTimer") == 1) {
+			if (entity instanceof MidnightLurkerSeenAngressiveEntity) {
+				((MidnightLurkerSeenAngressiveEntity) entity).setAnimation("teleport");
+			}
+			MidnightlurkerMod.queueServerWork(2, () -> {
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerdisappear")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerdisappear")), SoundSource.NEUTRAL, 1, 1, false);
+					}
 				}
-				if (entity.getPersistentData().getDouble("SoundActivate") == 1) {
-					MidnightlurkerMod.queueServerWork(2, () -> {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerdisappear")), SoundSource.NEUTRAL, 1, 1);
-							} else {
-								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerdisappear")), SoundSource.NEUTRAL, 1, 1, false);
-							}
-						}
-					});
-				}
-				if (entity instanceof MidnightLurkerSeenAngressiveEntity) {
-					((MidnightLurkerSeenAngressiveEntity) entity).setAnimation("teleport");
-				}
-				MidnightlurkerMod.queueServerWork(13, () -> {
-					if (!entity.level().isClientSide())
-						entity.discard();
-				});
+			});
+			MidnightlurkerMod.queueServerWork(13, () -> {
+				if (!entity.level().isClientSide())
+					entity.discard();
 			});
 		}
 		if (Math.random() > 0.9) {
