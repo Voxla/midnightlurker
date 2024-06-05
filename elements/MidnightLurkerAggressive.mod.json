@@ -48,11 +48,11 @@
       "value": ""
     },
     "equipmentBoots": {
-      "value": ""
+      "value": "Items.IRON_BOOTS"
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 12,
+    "attackStrength": 6,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.7,
     "movementSpeed": 0.42,

@@ -47,7 +47,7 @@
       "value": ""
     },
     "equipmentBoots": {
-      "value": ""
+      "value": "Items.IRON_BOOTS"
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",

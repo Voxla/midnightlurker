@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Midnight Lurker Shapeshifter",
+    "mobName": "Villager",
     "mobLabel": "",
     "mobModelTexture": "baseshapeshifter.png",
     "mobModelGlowTexture": "",
@@ -16,7 +16,7 @@
     "modelHeight": 1.95,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": true,
+    "hasSpawnEgg": false,
     "spawnEggBaseColor": {
       "value": -13421773,
       "falpha": 0.0

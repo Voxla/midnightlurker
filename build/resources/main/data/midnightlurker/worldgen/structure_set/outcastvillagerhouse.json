@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "midnightlurker:outcastvillagerhouse",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "distance": 0,
+    "spacing": 26,
+    "separation": 6,
+    "salt": 532603633
+  }
+}

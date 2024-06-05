@@ -1,0 +1,15 @@
+{
+  "name": "midnightlurker:outcastvillagerhouse",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "midnightlurker:outcastvillagerhouse",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

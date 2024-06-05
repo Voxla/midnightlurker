@@ -248,6 +248,21 @@
 							"vector": [1, 1, 1]
 						}
 					}
+				},
+				"left_hand": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"right_hand": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"jaw": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
 				}
 			}
 		},
@@ -395,6 +410,21 @@
 						"2.84": {
 							"vector": [1, 1, 1]
 						}
+					}
+				},
+				"left_hand": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"right_hand": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"jaw": {
+					"position": {
+						"vector": [0, 0, 0]
 					}
 				}
 			}
@@ -548,6 +578,21 @@
 				"faker": {
 					"rotation": {
 						"vector": [0, 180, 0]
+					}
+				},
+				"left_hand": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"right_hand": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"jaw": {
+					"position": {
+						"vector": [0, 0, 0]
 					}
 				}
 			}
@@ -882,6 +927,26 @@
 							"vector": [1, 1, 1]
 						}
 					}
+				},
+				"jaw": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"3.92": {
+							"vector": [0, -1, 0]
+						}
+					}
+				},
+				"left_hand": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"right_hand": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
 				}
 			}
 		},
@@ -1130,6 +1195,21 @@
 						"0.8": {
 							"vector": [0, 0, 0]
 						}
+					}
+				},
+				"jaw": {
+					"position": {
+						"vector": [0, -1, 0]
+					}
+				},
+				"left_hand": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"right_hand": {
+					"rotation": {
+						"vector": [0, 5, 88.05]
 					}
 				}
 			}
@@ -1404,6 +1484,21 @@
 					},
 					"scale": {
 						"vector": [1, 1, 1]
+					}
+				},
+				"left_hand": {
+					"rotation": {
+						"vector": [15, 77.5, 0]
+					}
+				},
+				"right_hand": {
+					"rotation": {
+						"vector": [0, 5, 70.55]
+					}
+				},
+				"jaw": {
+					"position": {
+						"vector": [0, 0, 0]
 					}
 				}
 			}

@@ -1,6 +1,7 @@
 package net.mcreator.midnightlurker.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -34,7 +35,12 @@ import net.mcreator.midnightlurker.MidnightlurkerMod;
 
 import java.util.Comparator;
 
+import java.io.IOException;
+import java.io.FileReader;
 import java.io.File;
+import java.io.BufferedReader;
+
+import com.google.gson.Gson;
 
 public class MidnightLurkerWatcherOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -234,6 +240,49 @@ public class MidnightLurkerWatcherOnEntityTickUpdateProcedure {
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"/playsound minecraft:ambient.cave ambient @a ~ ~ ~ 80 0.7");
 				}
+			}
+		}
+		lurker = new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "midnightlurkerconfig.json");
+		{
+			try {
+				BufferedReader bufferedReader = new BufferedReader(new FileReader(lurker));
+				StringBuilder jsonstringbuilder = new StringBuilder();
+				String line;
+				while ((line = bufferedReader.readLine()) != null) {
+					jsonstringbuilder.append(line);
+				}
+				bufferedReader.close();
+				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				if (mainjsonobject.get("lurker_persist_during_day").getAsBoolean() == false) {
+					if ((world instanceof Level _lvl47 && _lvl47.isDay()) == true && y > 60) {
+						if (entity instanceof MidnightLurkerWatcherEntity) {
+							if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 30, 30, 30), e -> true).isEmpty()) {
+								MidnightlurkerMod.queueServerWork(2, () -> {
+									if (!world.getEntitiesOfClass(MidnightLurkerWatcherEntity.class, AABB.ofSize(new Vec3(x, y, z), 23, 23, 23), e -> true).isEmpty()) {
+										if (world instanceof Level _level) {
+											if (!_level.isClientSide()) {
+												_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerdisappear")), SoundSource.NEUTRAL, 1, 1);
+											} else {
+												_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerdisappear")), SoundSource.NEUTRAL, 1, 1, false);
+											}
+										}
+									}
+								});
+								MidnightlurkerMod.queueServerWork(13, () -> {
+									if (!world.getEntitiesOfClass(MidnightLurkerWatcherEntity.class, AABB.ofSize(new Vec3(x, y, z), 23, 23, 23), e -> true).isEmpty()) {
+										if (!entity.level().isClientSide())
+											entity.discard();
+									}
+								});
+								if (entity instanceof MidnightLurkerWatcherEntity) {
+									((MidnightLurkerWatcherEntity) entity).setAnimation("teleport6");
+								}
+							}
+						}
+					}
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 		}
 	}

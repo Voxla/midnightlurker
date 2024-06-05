@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.midnightlurker.client.renderer.VoidHandsRenderer;
 import net.mcreator.midnightlurker.client.renderer.VoidGatewayRenderer;
+import net.mcreator.midnightlurker.client.renderer.VillagerOutcastRenderer;
 import net.mcreator.midnightlurker.client.renderer.SpookyambienceentityRenderer;
 import net.mcreator.midnightlurker.client.renderer.ShapeshifterPigRenderer;
 import net.mcreator.midnightlurker.client.renderer.ShapeShifterCowRenderer;
@@ -86,5 +87,6 @@ public class MidnightlurkerModEntityRenderers {
 		event.registerEntityRenderer(MidnightlurkerModEntities.INVISIBLE_ANIMAL_KILLER.get(), InvisibleAnimalKillerRenderer::new);
 		event.registerEntityRenderer(MidnightlurkerModEntities.SHAPESHIFTER_PIG.get(), ShapeshifterPigRenderer::new);
 		event.registerEntityRenderer(MidnightlurkerModEntities.SHAPE_SHIFTER_COW.get(), ShapeShifterCowRenderer::new);
+		event.registerEntityRenderer(MidnightlurkerModEntities.VILLAGER_OUTCAST.get(), VillagerOutcastRenderer::new);
 	}
 }

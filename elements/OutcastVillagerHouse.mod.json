@@ -1,0 +1,28 @@
+{
+  "_fv": 47,
+  "_type": "restructure",
+  "definition": {
+    "restrictBiomes": [
+      {
+        "value": "roofed_forest"
+      }
+    ],
+    "structureStep": "Surface structures",
+    "terrainAdaptation": "Beard thin",
+    "startHeightmap": "WORLD SURFACE",
+    "structureRotation": true,
+    "expansionHack": false,
+    "jigsawSize": 1,
+    "absoluteHeight": 0,
+    "distanceFromCenter": 32,
+    "minSpacingSeparation": 6,
+    "maxSpacingSeparation": 25,
+    "selectedStructure": "outcastvillagerhouse",
+    "structuresWeight": 1,
+    "structureSetPlacement": "Random spread",
+    "templatesWeight": 1,
+    "typeElement": "Single pool element",
+    "typeProjection": "Rigid",
+    "adaptNoise": true
+  }
+}

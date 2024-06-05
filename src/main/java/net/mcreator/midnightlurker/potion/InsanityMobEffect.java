@@ -24,7 +24,7 @@ public class InsanityMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		InsanitysoundsProcedure.execute(entity.level(), entity);
+		InsanitysoundsProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override

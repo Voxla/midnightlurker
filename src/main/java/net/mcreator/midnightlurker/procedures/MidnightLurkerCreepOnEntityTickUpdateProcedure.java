@@ -1,6 +1,7 @@
 package net.mcreator.midnightlurker.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -8,6 +9,7 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
@@ -39,6 +41,13 @@ import net.mcreator.midnightlurker.MidnightlurkerMod;
 
 import java.util.Comparator;
 
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.File;
+import java.io.BufferedReader;
+
+import com.google.gson.Gson;
+
 public class MidnightLurkerCreepOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -48,6 +57,8 @@ public class MidnightLurkerCreepOnEntityTickUpdateProcedure {
 		double spawny = 0;
 		double yaw = 0;
 		double yawlurker = 0;
+		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
+		File lurker = new File("");
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 60, 0, false, false));
 		if (entity.isPassenger()) {
@@ -59,31 +70,28 @@ public class MidnightLurkerCreepOnEntityTickUpdateProcedure {
 					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 				}
 			}.compareDistOf(x, y, z)).findFirst().orElse(null)).getX() + Mth.nextInt(RandomSource.create(), -10, 10);
-			spawny = ((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 300, 300, 300), e -> true).stream().sorted(new Object() {
-				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-				}
-			}.compareDistOf(x, y, z)).findFirst().orElse(null)).getY() + Mth.nextInt(RandomSource.create(), -2, 2);
 			spawnz = ((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 300, 300, 300), e -> true).stream().sorted(new Object() {
 				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 				}
 			}.compareDistOf(x, y, z)).findFirst().orElse(null)).getZ() + Mth.nextInt(RandomSource.create(), -10, 10);
 		}
-		if (world.isEmptyBlock(BlockPos.containing(spawnx, spawny + 0, spawnz)) && world.isEmptyBlock(BlockPos.containing(spawnx, spawny + 2, spawnz)) && world.isEmptyBlock(BlockPos.containing(spawnx, spawny + 3, spawnz))
-				&& !world.isEmptyBlock(BlockPos.containing(spawnx, spawny - 1, spawnz))) {
+		if (world.isEmptyBlock(BlockPos.containing(spawnx, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) spawnx, (int) spawnz) + 0, spawnz))
+				&& world.isEmptyBlock(BlockPos.containing(spawnx, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) spawnx, (int) spawnz) + 2, spawnz))
+				&& world.isEmptyBlock(BlockPos.containing(spawnx, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) spawnx, (int) spawnz) + 3, spawnz))
+				&& !world.isEmptyBlock(BlockPos.containing(spawnx, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) spawnx, (int) spawnz) - 1, spawnz))) {
 			if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 300, 300, 300), e -> true).isEmpty() && !(!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 20, 20, 20), e -> true).isEmpty())) {
-				if (entity instanceof LivingEntity _livEnt19 && _livEnt19.hasEffect(MobEffects.INVISIBILITY)) {
+				if (entity instanceof LivingEntity _livEnt20 && _livEnt20.hasEffect(MobEffects.INVISIBILITY)) {
 					{
 						Entity _ent = entity;
-						_ent.teleportTo(spawnx, spawny, spawnz);
+						_ent.teleportTo(spawnx, (world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) spawnx, (int) spawnz)), spawnz);
 						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport(spawnx, spawny, spawnz, _ent.getYRot(), _ent.getXRot());
+							_serverPlayer.connection.teleport(spawnx, (world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) spawnx, (int) spawnz)), spawnz, _ent.getYRot(), _ent.getXRot());
 					}
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt21 && _livEnt21.hasEffect(MobEffects.INVISIBILITY)) {
+		if (entity instanceof LivingEntity _livEnt23 && _livEnt23.hasEffect(MobEffects.INVISIBILITY)) {
 			if (entity.getPersistentData().getDouble("Disalol") < 2) {
 				entity.getPersistentData().putDouble("Disalol", (entity.getPersistentData().getDouble("Disalol") + 1));
 			}
@@ -108,7 +116,7 @@ public class MidnightLurkerCreepOnEntityTickUpdateProcedure {
 							"/playsound midnightlurker:lurkerdisappear neutral @a ~ ~ ~ 1 1");
 			}
 		}
-		if (!(entity instanceof LivingEntity _livEnt32 && _livEnt32.hasEffect(MobEffects.INVISIBILITY))) {
+		if (!(entity instanceof LivingEntity _livEnt34 && _livEnt34.hasEffect(MobEffects.INVISIBILITY))) {
 			if (entity.getPersistentData().getDouble("Disalol") > 0) {
 				entity.getPersistentData().putDouble("Disalol", 0);
 			}
@@ -249,10 +257,53 @@ public class MidnightLurkerCreepOnEntityTickUpdateProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt85 && _livEnt85.hasEffect(MobEffects.INVISIBILITY)) {
+		if (entity instanceof LivingEntity _livEnt87 && _livEnt87.hasEffect(MobEffects.INVISIBILITY)) {
 			entity.getPersistentData().putBoolean("InvisLogic", true);
-		} else if (!(entity instanceof LivingEntity _livEnt87 && _livEnt87.hasEffect(MobEffects.INVISIBILITY))) {
+		} else if (!(entity instanceof LivingEntity _livEnt89 && _livEnt89.hasEffect(MobEffects.INVISIBILITY))) {
 			entity.getPersistentData().putBoolean("InvisLogic", false);
+		}
+		lurker = new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "midnightlurkerconfig.json");
+		{
+			try {
+				BufferedReader bufferedReader = new BufferedReader(new FileReader(lurker));
+				StringBuilder jsonstringbuilder = new StringBuilder();
+				String line;
+				while ((line = bufferedReader.readLine()) != null) {
+					jsonstringbuilder.append(line);
+				}
+				bufferedReader.close();
+				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				if (mainjsonobject.get("lurker_persist_during_day").getAsBoolean() == false) {
+					if ((world instanceof Level _lvl94 && _lvl94.isDay()) == true && y > 60) {
+						if (entity instanceof MidnightLurkerCreepEntity) {
+							if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 30, 30, 30), e -> true).isEmpty()) {
+								MidnightlurkerMod.queueServerWork(2, () -> {
+									if (!world.getEntitiesOfClass(MidnightLurkerCreepEntity.class, AABB.ofSize(new Vec3(x, y, z), 23, 23, 23), e -> true).isEmpty()) {
+										if (world instanceof Level _level) {
+											if (!_level.isClientSide()) {
+												_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerdisappear")), SoundSource.NEUTRAL, 1, 1);
+											} else {
+												_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerdisappear")), SoundSource.NEUTRAL, 1, 1, false);
+											}
+										}
+									}
+								});
+								MidnightlurkerMod.queueServerWork(13, () -> {
+									if (!world.getEntitiesOfClass(MidnightLurkerCreepEntity.class, AABB.ofSize(new Vec3(x, y, z), 23, 23, 23), e -> true).isEmpty()) {
+										if (!entity.level().isClientSide())
+											entity.discard();
+									}
+								});
+								if (entity instanceof MidnightLurkerCreepEntity) {
+									((MidnightLurkerCreepEntity) entity).setAnimation("teleport11");
+								}
+							}
+						}
+					}
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }

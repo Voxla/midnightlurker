@@ -58,6 +58,10 @@ public class LurkerconfigProcedure {
 			mainjsonobject.addProperty("encounters_progress_stages", true);
 			mainjsonobject.addProperty("show_amnesia_effect_in_inv", true);
 			mainjsonobject.addProperty("show_insanity_effect_in_inv", true);
+			mainjsonobject.addProperty("villager_shapeshifter_spawning", true);
+			mainjsonobject.addProperty("cow_shapeshifter_spawning", true);
+			mainjsonobject.addProperty("pig_shapeshifter_spawning", true);
+			mainjsonobject.addProperty("lurker_persist_during_day", true);
 			{
 				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 				try {
@@ -172,6 +176,58 @@ public class LurkerconfigProcedure {
 				}
 				if (lurker.exists() && !mainjsonobject.has("show_insanity_effect_in_inv")) {
 					mainjsonobject.addProperty("show_insanity_effect_in_inv", true);
+					{
+						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(lurker);
+							fileWriter.write(mainGSONBuilderVariable.toJson(mainjsonobject));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
+				if (lurker.exists() && !mainjsonobject.has("villager_shapeshifter_spawning")) {
+					mainjsonobject.addProperty("villager_shapeshifter_spawning", true);
+					{
+						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(lurker);
+							fileWriter.write(mainGSONBuilderVariable.toJson(mainjsonobject));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
+				if (lurker.exists() && !mainjsonobject.has("cow_shapeshifter_spawning")) {
+					mainjsonobject.addProperty("cow_shapeshifter_spawning", true);
+					{
+						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(lurker);
+							fileWriter.write(mainGSONBuilderVariable.toJson(mainjsonobject));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
+				if (lurker.exists() && !mainjsonobject.has("pig_shapeshifter_spawning")) {
+					mainjsonobject.addProperty("pig_shapeshifter_spawning", true);
+					{
+						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(lurker);
+							fileWriter.write(mainGSONBuilderVariable.toJson(mainjsonobject));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
+				if (lurker.exists() && !mainjsonobject.has("lurker_persist_during_day")) {
+					mainjsonobject.addProperty("lurker_persist_during_day", true);
 					{
 						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 						try {

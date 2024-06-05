@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.midnightlurker.entity.VoidHandsEntity;
 import net.mcreator.midnightlurker.entity.VoidGatewayEntity;
+import net.mcreator.midnightlurker.entity.VillagerOutcastEntity;
 import net.mcreator.midnightlurker.entity.SpookyambienceentityEntity;
 import net.mcreator.midnightlurker.entity.ShapeshifterPigEntity;
 import net.mcreator.midnightlurker.entity.ShapeShifterCowEntity;
@@ -140,6 +141,10 @@ public class MidnightlurkerModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ShapeshifterPigEntity::new).fireImmune().sized(0.9f, 0.9f));
 	public static final RegistryObject<EntityType<ShapeShifterCowEntity>> SHAPE_SHIFTER_COW = register("shape_shifter_cow", EntityType.Builder.<ShapeShifterCowEntity>of(ShapeShifterCowEntity::new, MobCategory.CREATURE)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ShapeShifterCowEntity::new).fireImmune().sized(0.9f, 1.4f));
+	public static final RegistryObject<EntityType<VillagerOutcastEntity>> VILLAGER_OUTCAST = register("villager_outcast",
+			EntityType.Builder.<VillagerOutcastEntity>of(VillagerOutcastEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VillagerOutcastEntity::new)
+
+					.sized(0.6f, 1.95f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -184,6 +189,7 @@ public class MidnightlurkerModEntities {
 			InvisibleAnimalKillerEntity.init();
 			ShapeshifterPigEntity.init();
 			ShapeShifterCowEntity.init();
+			VillagerOutcastEntity.init();
 		});
 	}
 
@@ -225,5 +231,6 @@ public class MidnightlurkerModEntities {
 		event.put(INVISIBLE_ANIMAL_KILLER.get(), InvisibleAnimalKillerEntity.createAttributes().build());
 		event.put(SHAPESHIFTER_PIG.get(), ShapeshifterPigEntity.createAttributes().build());
 		event.put(SHAPE_SHIFTER_COW.get(), ShapeShifterCowEntity.createAttributes().build());
+		event.put(VILLAGER_OUTCAST.get(), VillagerOutcastEntity.createAttributes().build());
 	}
 }

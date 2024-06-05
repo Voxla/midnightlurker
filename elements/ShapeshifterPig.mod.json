@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Shapeshifter Pig",
+    "mobName": "Pig",
     "mobLabel": "",
     "mobModelName": "Pig",
     "mobModelTexture": "shapeshifterpig.png",

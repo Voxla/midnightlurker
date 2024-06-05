@@ -1,12 +1,4 @@
 {
-  "lurkeranger": {
-    "sounds": [
-      {
-        "name": "midnightlurker:change",
-        "stream": false
-      }
-    ]
-  },
   "lurkerdisappear": {
     "sounds": [
       {
@@ -431,6 +423,14 @@
       }
     ]
   },
+  "lurkeranger": {
+    "sounds": [
+      {
+        "name": "midnightlurker:lurkerchange",
+        "stream": false
+      }
+    ]
+  },
   "lurker_stunned": {
     "sounds": [
       {
@@ -451,6 +451,50 @@
     "sounds": [
       {
         "name": "midnightlurker:lurkerstunover",
+        "stream": false
+      }
+    ]
+  },
+  "outcastvillager_hit": {
+    "sounds": [
+      {
+        "name": "midnightlurker:outcastvillager_hit1",
+        "stream": false
+      },
+      {
+        "name": "midnightlurker:outcastvillager_hit2",
+        "stream": false
+      },
+      {
+        "name": "midnightlurker:outcastvillager_hit3",
+        "stream": false
+      },
+      {
+        "name": "midnightlurker:outcastvillager_hit4",
+        "stream": false
+      }
+    ]
+  },
+  "outcastvillager_death": {
+    "sounds": [
+      {
+        "name": "midnightlurker:outcastvillager_death",
+        "stream": false
+      }
+    ]
+  },
+  "outcastvillager_idle": {
+    "sounds": [
+      {
+        "name": "midnightlurker:outcastvillager_idle1",
+        "stream": false
+      },
+      {
+        "name": "midnightlurker:outcastvillager_idle2",
+        "stream": false
+      },
+      {
+        "name": "midnightlurker:outcastvillager_idle3",
         "stream": false
       }
     ]

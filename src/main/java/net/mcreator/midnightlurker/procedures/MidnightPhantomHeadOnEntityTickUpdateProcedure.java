@@ -220,9 +220,9 @@ public class MidnightPhantomHeadOnEntityTickUpdateProcedure {
 					_level.sendParticles((SimpleParticleType) (MidnightlurkerModParticleTypes.VOID_DOT.get()), x, y, z, 2, 0.2, 0.2, 0.2, 0.1);
 			}
 		}
-		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 11, 11, 11), e -> true).isEmpty()) {
+		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 13, 13, 13), e -> true).isEmpty()) {
 			entity.getPersistentData().putDouble("phantomshaking", 1);
-		} else if (!(!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 11, 11, 11), e -> true).isEmpty())) {
+		} else if (!(!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 13, 13, 13), e -> true).isEmpty())) {
 			entity.getPersistentData().putDouble("phantomshaking", 0);
 		}
 		if (entity.getPersistentData().getDouble("phantomshaking") == 1) {

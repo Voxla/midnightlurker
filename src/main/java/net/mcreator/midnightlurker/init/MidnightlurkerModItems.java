@@ -11,6 +11,7 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.item.Item;
 
+import net.mcreator.midnightlurker.item.LurkerBookItem;
 import net.mcreator.midnightlurker.MidnightlurkerMod;
 
 public class MidnightlurkerModItems {
@@ -52,8 +53,6 @@ public class MidnightlurkerModItems {
 			() -> new ForgeSpawnEggItem(MidnightlurkerModEntities.MIDNIGHT_LURKER_RUNTRUE, -13421773, -3355444, new Item.Properties()));
 	public static final RegistryObject<Item> MIDNIGHT_LURKER_HIDER_SPAWN_EGG = REGISTRY.register("midnight_lurker_hider_spawn_egg",
 			() -> new ForgeSpawnEggItem(MidnightlurkerModEntities.MIDNIGHT_LURKER_HIDER, -13421773, -3355444, new Item.Properties()));
-	public static final RegistryObject<Item> MIDNIGHT_LURKER_SHAPESHIFTER_SPAWN_EGG = REGISTRY.register("midnight_lurker_shapeshifter_spawn_egg",
-			() -> new ForgeSpawnEggItem(MidnightlurkerModEntities.MIDNIGHT_LURKER_SHAPESHIFTER, -13421773, -5932444, new Item.Properties()));
 	public static final RegistryObject<Item> MIDNIGHT_LURKER_STARE_SPAWN_EGG = REGISTRY.register("midnight_lurker_stare_spawn_egg",
 			() -> new ForgeSpawnEggItem(MidnightlurkerModEntities.MIDNIGHT_LURKER_STARE, -13421773, -3355444, new Item.Properties()));
 	public static final RegistryObject<Item> MIDNIGHTLURKER_NE_SPAWN_EGG = REGISTRY.register("midnightlurker_ne_spawn_egg", () -> new ForgeSpawnEggItem(MidnightlurkerModEntities.MIDNIGHTLURKER_NE, -13421773, -12708839, new Item.Properties()));
@@ -62,4 +61,5 @@ public class MidnightlurkerModItems {
 	public static final RegistryObject<Item> VOID_HANDS_SPAWN_EGG = REGISTRY.register("void_hands_spawn_egg", () -> new ForgeSpawnEggItem(MidnightlurkerModEntities.VOID_HANDS, -16777216, -16777216, new Item.Properties()));
 	public static final RegistryObject<Item> MIDNIGHT_LURKER_CREEP_SPAWN_EGG = REGISTRY.register("midnight_lurker_creep_spawn_egg",
 			() -> new ForgeSpawnEggItem(MidnightlurkerModEntities.MIDNIGHT_LURKER_CREEP, -13421773, -3355444, new Item.Properties()));
+	public static final RegistryObject<Item> LURKER_BOOK = REGISTRY.register("lurker_book", () -> new LurkerBookItem());
 }

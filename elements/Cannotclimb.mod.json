@@ -561,58 +561,16 @@
         "value": "Blocks.LADDER"
       },
       {
-        "value": "Blocks.MANGROVE_PROPAGULE"
+        "value": "Blocks.PISTON"
       },
       {
-        "value": "Blocks.MANGROVE_SIGN"
+        "value": "Blocks.STICKY_PISTON"
       },
       {
-        "value": "Blocks.MANGROVE_WALL_SIGN"
+        "value": "Blocks.PISTON_HEAD"
       },
       {
-        "value": "Blocks.MANGROVE_BUTTON"
-      },
-      {
-        "value": "Blocks.MANGROVE_PRESSURE_PLATE"
-      },
-      {
-        "value": "Blocks.TORCHFLOWER"
-      },
-      {
-        "value": "Blocks.PINK_PETALS"
-      },
-      {
-        "value": "Blocks.PITCHER_PLANT"
-      },
-      {
-        "value": "Blocks.BAMBOO_SIGN"
-      },
-      {
-        "value": "Blocks.BAMBOO_WALL_SIGN"
-      },
-      {
-        "value": "Blocks.BAMBOO_BUTTON"
-      },
-      {
-        "value": "Blocks.BAMBOO_PRESSURE_PLATE"
-      },
-      {
-        "value": "Blocks.BAMBOO"
-      },
-      {
-        "value": "Blocks.CHERRY_SAPLING"
-      },
-      {
-        "value": "Blocks.CHERRY_SIGN"
-      },
-      {
-        "value": "Blocks.CHERRY_WALL_SIGN"
-      },
-      {
-        "value": "Blocks.CHERRY_BUTTON"
-      },
-      {
-        "value": "Blocks.CHERRY_PRESSURE_PLATE"
+        "value": "Blocks.PISTON_EXTENSION"
       },
       {
         "value": "Blocks.STANDING_SIGN"
@@ -649,6 +607,393 @@
       },
       {
         "value": "Blocks.DARK_OAK_WALL_SIGN"
+      },
+      {
+        "value": "Blocks.LEVER"
+      },
+      {
+        "value": "Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE"
+      },
+      {
+        "value": "Blocks.STANDING_BANNER"
+      },
+      {
+        "value": "Blocks.WHITE_BANNER"
+      },
+      {
+        "value": "Blocks.ORANGE_BANNER"
+      },
+      {
+        "value": "Blocks.MAGENTA_BANNER"
+      },
+      {
+        "value": "Blocks.LIGHT_BLUE_BANNER"
+      },
+      {
+        "value": "Blocks.YELLOW_BANNER"
+      },
+      {
+        "value": "Blocks.LIME_BANNER"
+      },
+      {
+        "value": "Blocks.PINK_BANNER"
+      },
+      {
+        "value": "Blocks.GRAY_BANNER"
+      },
+      {
+        "value": "Blocks.LIGHT_GRAY_BANNER"
+      },
+      {
+        "value": "Blocks.CYAN_BANNER"
+      },
+      {
+        "value": "Blocks.PURPLE_BANNER"
+      },
+      {
+        "value": "Blocks.BLUE_BANNER"
+      },
+      {
+        "value": "Blocks.BROWN_BANNER"
+      },
+      {
+        "value": "Blocks.GREEN_BANNER"
+      },
+      {
+        "value": "Blocks.RED_BANNER"
+      },
+      {
+        "value": "Blocks.BLACK_BANNER"
+      },
+      {
+        "value": "Blocks.WALL_BANNER"
+      },
+      {
+        "value": "Blocks.WHITE_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.ORANGE_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.MAGENTA_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.LIGHT_BLUE_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.YELLOW_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.LIME_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.PINK_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.GRAY_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.LIGHT_GRAY_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.CYAN_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.PURPLE_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.BLUE_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.BROWN_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.GREEN_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.RED_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.BLACK_WALL_BANNER"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#0"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#1"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#2"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#3"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#4"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#5"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#6"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#7"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#8"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#9"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#10"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#11"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#12"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#13"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#14"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#15"
+      },
+      {
+        "value": "Blocks.CANDLE_CAKE#16"
+      },
+      {
+        "value": "Blocks.BAMBOO"
+      },
+      {
+        "value": "Blocks.RESPAWN_ANCHOR"
+      },
+      {
+        "value": "Blocks.LODESTONE"
+      },
+      {
+        "value": "Blocks.AZALEA"
+      },
+      {
+        "value": "Blocks.FLOWERING_AZALEA"
+      },
+      {
+        "value": "Blocks.MELON_STEM"
+      },
+      {
+        "value": "Blocks.ATTACHED_MELON_STEM"
+      },
+      {
+        "value": "Blocks.PUMPKIN_STEM"
+      },
+      {
+        "value": "Blocks.ATTACHED_PUMPKIN_STEM"
+      },
+      {
+        "value": "Blocks.SWEET_BERRY_BUSH"
+      },
+      {
+        "value": "Blocks.GLOW_LICHEN"
+      },
+      {
+        "value": "Blocks.END_ROD"
+      },
+      {
+        "value": "Blocks.BEETROOTS"
+      },
+      {
+        "value": "Blocks.FLOWER_POT"
+      },
+      {
+        "value": "Blocks.POTTED_OAK_SAPLING"
+      },
+      {
+        "value": "Blocks.POTTED_SPRUCE_SAPLING"
+      },
+      {
+        "value": "Blocks.POTTED_BIRCH_SAPLING"
+      },
+      {
+        "value": "Blocks.POTTED_JUNGLE_SAPLING"
+      },
+      {
+        "value": "Blocks.POTTED_ACACIA_SAPLING"
+      },
+      {
+        "value": "Blocks.POTTED_DARK_OAK_SAPLING"
+      },
+      {
+        "value": "Blocks.POTTED_FERN"
+      },
+      {
+        "value": "Blocks.POTTED_DANDELION"
+      },
+      {
+        "value": "Blocks.POTTED_POPPY"
+      },
+      {
+        "value": "Blocks.POTTED_BLUE_ORCHID"
+      },
+      {
+        "value": "Blocks.POTTED_ALLIUM"
+      },
+      {
+        "value": "Blocks.POTTED_AZURE_BLUET"
+      },
+      {
+        "value": "Blocks.POTTED_RED_TULIP"
+      },
+      {
+        "value": "Blocks.POTTED_ORANGE_TULIP"
+      },
+      {
+        "value": "Blocks.POTTED_WHITE_TULIP"
+      },
+      {
+        "value": "Blocks.POTTED_PINK_TULIP"
+      },
+      {
+        "value": "Blocks.POTTED_OXEYE_DAISY"
+      },
+      {
+        "value": "Blocks.POTTED_CORNFLOWER"
+      },
+      {
+        "value": "Blocks.POTTED_LILY_OF_THE_VALLEY"
+      },
+      {
+        "value": "Blocks.POTTED_WITHER_ROSE"
+      },
+      {
+        "value": "Blocks.POTTED_RED_MUSHROOM"
+      },
+      {
+        "value": "Blocks.POTTED_BROWN_MUSHROOM"
+      },
+      {
+        "value": "Blocks.POTTED_DEAD_BUSH"
+      },
+      {
+        "value": "Blocks.POTTED_CACTUS"
+      },
+      {
+        "value": "Blocks.POTTED_BAMBOO"
+      },
+      {
+        "value": "Blocks.POTTED_CRIMSON_FUNGUS"
+      },
+      {
+        "value": "Blocks.POTTED_WARPED_FUNGUS"
+      },
+      {
+        "value": "Blocks.POTTED_CRIMSON_ROOTS"
+      },
+      {
+        "value": "Blocks.POTTED_WARPED_ROOTS"
+      },
+      {
+        "value": "Blocks.POTTED_AZALEA_BUSH"
+      },
+      {
+        "value": "Blocks.POTTED_FLOWERING_AZALEA_BUSH"
+      },
+      {
+        "value": "Blocks.RAIL"
+      },
+      {
+        "value": "Blocks.GOLDEN_RAIL"
+      },
+      {
+        "value": "Blocks.DETECTOR_RAIL"
+      },
+      {
+        "value": "Blocks.ACTIVATOR_RAIL"
+      },
+      {
+        "value": "Blocks.WHEAT"
+      },
+      {
+        "value": "Blocks.PORTAL"
+      },
+      {
+        "value": "Blocks.COCOA"
+      },
+      {
+        "value": "Blocks.END_PORTAL"
+      },
+      {
+        "value": "Blocks.SKULL#0"
+      },
+      {
+        "value": "Blocks.SKULL#1"
+      },
+      {
+        "value": "Blocks.SKULL#2"
+      },
+      {
+        "value": "Blocks.SKULL#3"
+      },
+      {
+        "value": "Blocks.SKULL#4"
+      },
+      {
+        "value": "Blocks.SKULL#5"
+      },
+      {
+        "value": "Blocks.SKELETON_WALL_SKULL"
+      },
+      {
+        "value": "Blocks.WITHER_SKELETON_WALL_SKULL"
+      },
+      {
+        "value": "Blocks.ZOMBIE_WALL_HEAD"
+      },
+      {
+        "value": "Blocks.PLAYER_WALL_HEAD"
+      },
+      {
+        "value": "Blocks.CREEPER_WALL_HEAD"
+      },
+      {
+        "value": "Blocks.DRAGON_WALL_HEAD"
+      },
+      {
+        "value": "Blocks.MANGROVE_PROPAGULE"
+      },
+      {
+        "value": "Blocks.MANGROVE_SIGN"
+      },
+      {
+        "value": "Blocks.MANGROVE_WALL_SIGN"
+      },
+      {
+        "value": "Blocks.MANGROVE_BUTTON"
+      },
+      {
+        "value": "Blocks.MANGROVE_PRESSURE_PLATE"
+      },
+      {
+        "value": "Blocks.POTTED_MANGROVE_PROPAGULE"
+      },
+      {
+        "value": "Blocks.FROGSPAWN"
+      },
+      {
+        "value": "Blocks.CHERRY_SIGN"
+      },
+      {
+        "value": "Blocks.BAMBOO_SIGN"
+      },
+      {
+        "value": "Blocks.CHERRY_WALL_SIGN"
+      },
+      {
+        "value": "Blocks.BAMBOO_WALL_SIGN"
       },
       {
         "value": "Blocks.OAK_HANGING_SIGN"
@@ -715,6 +1060,39 @@
       },
       {
         "value": "Blocks.BAMBOO_WALL_HANGING_SIGN"
+      },
+      {
+        "value": "Blocks.BAMBOO_BUTTON"
+      },
+      {
+        "value": "Blocks.BAMBOO_PRESSURE_PLATE"
+      },
+      {
+        "value": "Blocks.CHERRY_SAPLING"
+      },
+      {
+        "value": "Blocks.CHERRY_BUTTON"
+      },
+      {
+        "value": "Blocks.CHERRY_PRESSURE_PLATE"
+      },
+      {
+        "value": "Blocks.POTTED_CHERRY_SAPLING"
+      },
+      {
+        "value": "Blocks.TORCHFLOWER"
+      },
+      {
+        "value": "Blocks.PINK_PETALS"
+      },
+      {
+        "value": "Blocks.PITCHER_PLANT"
+      },
+      {
+        "value": "Blocks.PIGLIN_HEAD"
+      },
+      {
+        "value": "Blocks.PIGLIN_WALL_HEAD"
       }
     ],
     "functions": [],

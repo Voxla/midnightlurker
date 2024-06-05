@@ -24,7 +24,7 @@ import java.io.BufferedReader;
 import com.google.gson.Gson;
 
 public class InsanitysoundsProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
@@ -42,17 +42,15 @@ public class InsanitysoundsProcedure {
 			if (entity instanceof LivingEntity _livEnt11 && _livEnt11.hasEffect(MidnightlurkerModMobEffects.INSANITY.get()) && entity.getPersistentData().getDouble("InsanitySounds") == 1
 					&& (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MidnightlurkerModMobEffects.INSANITY.get()) ? _livEnt.getEffect(MidnightlurkerModMobEffects.INSANITY.get()).getDuration() : 0) > 20) {
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(
-							new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"/playsound midnightlurker:insanityambience neutral @p");
 			}
-		} else if (entity instanceof LivingEntity _livEnt18 && _livEnt18.hasEffect(MidnightlurkerModMobEffects.INSANITY.get())
+		} else if (entity instanceof LivingEntity _livEnt15 && _livEnt15.hasEffect(MidnightlurkerModMobEffects.INSANITY.get())
 				&& (entity.getCapability(MidnightlurkerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MidnightlurkerModVariables.PlayerVariables())).InsanityStage >= 7) {
-			if (entity instanceof LivingEntity _livEnt19 && _livEnt19.hasEffect(MidnightlurkerModMobEffects.INSANITY.get()) && entity.getPersistentData().getDouble("InsanitySounds") == 1
+			if (entity instanceof LivingEntity _livEnt16 && _livEnt16.hasEffect(MidnightlurkerModMobEffects.INSANITY.get()) && entity.getPersistentData().getDouble("InsanitySounds") == 1
 					&& (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MidnightlurkerModMobEffects.INSANITY.get()) ? _livEnt.getEffect(MidnightlurkerModMobEffects.INSANITY.get()).getDuration() : 0) > 20) {
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(
-							new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"/playsound midnightlurker:insanitychase neutral @p");
 			}
 		}

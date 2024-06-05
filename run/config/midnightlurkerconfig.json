@@ -21,5 +21,9 @@
   "invisible_entities_spawning": true,
   "encounters_progress_stages": true,
   "show_amnesia_effect_in_inv": true,
-  "show_insanity_effect_in_inv": true
+  "show_insanity_effect_in_inv": true,
+  "villager_shapeshifter_spawning": true,
+  "cow_shapeshifter_spawning": true,
+  "pig_shapeshifter_spawning": true,
+  "lurker_persist_during_day": true
 }

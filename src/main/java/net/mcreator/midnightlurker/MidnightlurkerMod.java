@@ -33,6 +33,7 @@ import net.mcreator.midnightlurker.init.MidnightlurkerModTabs;
 import net.mcreator.midnightlurker.init.MidnightlurkerModSounds;
 import net.mcreator.midnightlurker.init.MidnightlurkerModParticleTypes;
 import net.mcreator.midnightlurker.init.MidnightlurkerModMobEffects;
+import net.mcreator.midnightlurker.init.MidnightlurkerModMenus;
 import net.mcreator.midnightlurker.init.MidnightlurkerModItems;
 import net.mcreator.midnightlurker.init.MidnightlurkerModEntities;
 
@@ -64,6 +65,7 @@ public class MidnightlurkerMod {
 
 		MidnightlurkerModParticleTypes.REGISTRY.register(bus);
 
+		MidnightlurkerModMenus.REGISTRY.register(bus);
 	}
 
 	private static final String PROTOCOL_VERSION = "1";
