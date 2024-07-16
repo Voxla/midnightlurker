@@ -1,21 +1,13 @@
 {
-  "minecraft:adventure/adventuring_time": {
-    "criteria": {
-      "minecraft:frozen_river": "2024-05-26 23:20:38 -0400",
-      "minecraft:dark_forest": "2024-05-26 23:21:01 -0400",
-      "minecraft:snowy_plains": "2024-05-26 23:19:57 -0400"
-    },
-    "done": false
-  },
-  "minecraft:adventure/root": {
-    "criteria": {
-      "killed_something": "2024-05-26 23:22:14 -0400"
-    },
-    "done": true
-  },
   "minecraft:recipes/tools/golden_hoe": {
     "criteria": {
       "has_gold_ingot": "2024-05-26 23:22:21 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+    "criteria": {
+      "has_iron_boots": "2024-06-16 12:05:37 -0400"
     },
     "done": true
   },
@@ -67,9 +59,21 @@
     },
     "done": true
   },
+  "minecraft:story/obtain_armor": {
+    "criteria": {
+      "iron_boots": "2024-06-16 12:05:37 -0400"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/golden_leggings": {
     "criteria": {
       "has_gold_ingot": "2024-05-26 23:22:21 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2024-05-26 23:22:14 -0400"
     },
     "done": true
   },
@@ -85,6 +89,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+    "criteria": {
+      "has_iron_boots": "2024-06-16 12:05:37 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:frozen_river": "2024-05-26 23:20:38 -0400",
+      "minecraft:dark_forest": "2024-05-26 23:21:01 -0400",
+      "minecraft:river": "2024-07-15 20:11:35 -0400",
+      "minecraft:snowy_plains": "2024-05-26 23:19:57 -0400"
+    },
+    "done": false
+  },
   "minecraft:recipes/tools/golden_shovel": {
     "criteria": {
       "has_gold_ingot": "2024-05-26 23:22:21 -0400"
@@ -97,11 +116,5 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/crafting_table": {
-    "criteria": {
-      "unlock_right_away": "2024-06-04 16:26:09 -0400"
-    },
-    "done": true
-  },
-  "DataVersion": 3465
+  "DataVersion": 2975
 }

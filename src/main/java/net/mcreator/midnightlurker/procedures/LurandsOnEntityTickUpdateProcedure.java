@@ -99,7 +99,7 @@ public class LurandsOnEntityTickUpdateProcedure {
 						}
 					}
 				}
-				if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 100, 100, 100), e -> true).isEmpty()) {
+				if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty()) {
 					if (Math.random() > 0.7) {
 						if ((((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 100, 100, 100), e -> true).stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
@@ -172,8 +172,8 @@ public class LurandsOnEntityTickUpdateProcedure {
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 60, 255, false, false));
 		if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkerdoors")))) {
-			if (((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp74
-					&& (world.getBlockState(BlockPos.containing(x + 1, y, z))).getValue(_getbp74)) == false) {
+			if (((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp71
+					&& (world.getBlockState(BlockPos.containing(x + 1, y, z))).getValue(_getbp71)) == false) {
 				{
 					BlockPos _pos = BlockPos.containing(x + 1, y, z);
 					BlockState _bs = world.getBlockState(_pos);
@@ -185,8 +185,8 @@ public class LurandsOnEntityTickUpdateProcedure {
 							"/playsound minecraft:block.wooden_door.open block @a ~ ~ ~ 1 1");
 			}
 		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkerdoors")))) {
-			if (((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp80
-					&& (world.getBlockState(BlockPos.containing(x - 1, y, z))).getValue(_getbp80)) == false) {
+			if (((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp77
+					&& (world.getBlockState(BlockPos.containing(x - 1, y, z))).getValue(_getbp77)) == false) {
 				{
 					BlockPos _pos = BlockPos.containing(x - 1, y, z);
 					BlockState _bs = world.getBlockState(_pos);
@@ -198,8 +198,8 @@ public class LurandsOnEntityTickUpdateProcedure {
 							"/playsound minecraft:block.wooden_door.open block @a ~ ~ ~ 1 1");
 			}
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkerdoors")))) {
-			if (((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp86
-					&& (world.getBlockState(BlockPos.containing(x, y, z + 1))).getValue(_getbp86)) == false) {
+			if (((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp83
+					&& (world.getBlockState(BlockPos.containing(x, y, z + 1))).getValue(_getbp83)) == false) {
 				{
 					BlockPos _pos = BlockPos.containing(x, y, z + 1);
 					BlockState _bs = world.getBlockState(_pos);
@@ -211,8 +211,8 @@ public class LurandsOnEntityTickUpdateProcedure {
 							"/playsound minecraft:block.wooden_door.open block @a ~ ~ ~ 1 1");
 			}
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkerdoors")))) {
-			if (((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp92
-					&& (world.getBlockState(BlockPos.containing(x, y, z - 1))).getValue(_getbp92)) == false) {
+			if (((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp89
+					&& (world.getBlockState(BlockPos.containing(x, y, z - 1))).getValue(_getbp89)) == false) {
 				{
 					BlockPos _pos = BlockPos.containing(x, y, z - 1);
 					BlockState _bs = world.getBlockState(_pos);

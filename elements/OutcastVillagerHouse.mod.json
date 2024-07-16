@@ -7,9 +7,9 @@
         "value": "roofed_forest"
       }
     ],
-    "structureStep": "Surface structures",
-    "terrainAdaptation": "Beard thin",
-    "startHeightmap": "WORLD SURFACE",
+    "structureStep": "Fluid springs",
+    "terrainAdaptation": "Beard box",
+    "startHeightmap": "MOTION BLOCKING",
     "structureRotation": true,
     "expansionHack": false,
     "jigsawSize": 1,

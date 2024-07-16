@@ -41,7 +41,7 @@ public class LurkerconfigProcedure {
 			}
 			mainjsonobject.addProperty("lurker_chase_music", false);
 			mainjsonobject.addProperty("lurker_spawn_rate", 3);
-			mainjsonobject.addProperty("the spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest.", 0);
+			mainjsonobject.addProperty("the spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest. you can set it to 0.5 for the lowest possible spawn rate.", 0);
 			mainjsonobject.addProperty("pop_up_jumpscare", true);
 			mainjsonobject.addProperty("jumpscare_sound", true);
 			mainjsonobject.addProperty("longer_lurker_chase", false);
@@ -52,7 +52,7 @@ public class LurkerconfigProcedure {
 			mainjsonobject.addProperty("the insanity countdown time determines how long the timer is for insanity. 1 is 5mins, 2 is 10mins, 3 is 20mins, and 4 is 30mins.", 0);
 			mainjsonobject.addProperty("lurker_invulnerable", false);
 			mainjsonobject.addProperty("nether_lurker_spawn_rate", 2);
-			mainjsonobject.addProperty("the nether spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest.", 0);
+			mainjsonobject.addProperty("the nether spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest. you can set it to 0.5 for the lowest possible spawn rate.", 0);
 			mainjsonobject.addProperty("amnesia", true);
 			mainjsonobject.addProperty("invisible_entities_spawning", true);
 			mainjsonobject.addProperty("encounters_progress_stages", true);
@@ -62,6 +62,10 @@ public class LurkerconfigProcedure {
 			mainjsonobject.addProperty("cow_shapeshifter_spawning", true);
 			mainjsonobject.addProperty("pig_shapeshifter_spawning", true);
 			mainjsonobject.addProperty("lurker_persist_during_day", true);
+			mainjsonobject.addProperty("aggro_lurker_break_trapdoors", true);
+			mainjsonobject.addProperty("void_gateway_spawn_rate", 3);
+			mainjsonobject.addProperty("the void gateway spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest. you can set it to 0.5 for the lowest possible spawn rate.", 0);
+			mainjsonobject.addProperty("cave_spawning", true);
 			{
 				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 				try {
@@ -109,8 +113,8 @@ public class LurkerconfigProcedure {
 						}
 					}
 				}
-				if (lurker.exists() && !mainjsonobject.has("the nether spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest.")) {
-					mainjsonobject.addProperty("the nether spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest.", 0);
+				if (lurker.exists() && !mainjsonobject.has("the nether spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest. you can set it to 0.5 for the lowest possible spawn rate.")) {
+					mainjsonobject.addProperty("the nether spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest. you can set it to 0.5 for the lowest possible spawn rate.", 0);
 					{
 						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 						try {
@@ -228,6 +232,58 @@ public class LurkerconfigProcedure {
 				}
 				if (lurker.exists() && !mainjsonobject.has("lurker_persist_during_day")) {
 					mainjsonobject.addProperty("lurker_persist_during_day", true);
+					{
+						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(lurker);
+							fileWriter.write(mainGSONBuilderVariable.toJson(mainjsonobject));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
+				if (lurker.exists() && !mainjsonobject.has("aggro_lurker_break_trapdoors")) {
+					mainjsonobject.addProperty("aggro_lurker_break_trapdoors", true);
+					{
+						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(lurker);
+							fileWriter.write(mainGSONBuilderVariable.toJson(mainjsonobject));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
+				if (lurker.exists() && !mainjsonobject.has("void_gateway_spawn_rate")) {
+					mainjsonobject.addProperty("void_gateway_spawn_rate", 3);
+					{
+						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(lurker);
+							fileWriter.write(mainGSONBuilderVariable.toJson(mainjsonobject));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
+				if (lurker.exists() && !mainjsonobject.has("the void gateway spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest. you can set it to 0.5 for the lowest possible spawn rate.")) {
+					mainjsonobject.addProperty("the void gateway spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest. you can set it to 0.5 for the lowest possible spawn rate.", 0);
+					{
+						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(lurker);
+							fileWriter.write(mainGSONBuilderVariable.toJson(mainjsonobject));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
+				if (lurker.exists() && !mainjsonobject.has("cave_spawning")) {
+					mainjsonobject.addProperty("cave_spawning", true);
 					{
 						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 						try {

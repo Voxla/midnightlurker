@@ -143,7 +143,7 @@
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningCondition": {
-      "name": "MidnightLurkerNaturalEntitySpawningCondition"
+      "name": "VoidGatewayNaturalEntitySpawningCondition"
     },
     "spawningProbability": 6,
     "mobSpawningType": "ambient",

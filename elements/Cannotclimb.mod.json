@@ -984,6 +984,21 @@
         "value": "Blocks.FROGSPAWN"
       },
       {
+        "value": "Blocks.PITCHER_PLANT"
+      },
+      {
+        "value": "Blocks.PITCHER_CROP"
+      },
+      {
+        "value": "Blocks.TORCHFLOWER"
+      },
+      {
+        "value": "Blocks.PIGLIN_HEAD"
+      },
+      {
+        "value": "Blocks.PIGLIN_WALL_HEAD"
+      },
+      {
         "value": "Blocks.CHERRY_SIGN"
       },
       {
@@ -1078,21 +1093,6 @@
       },
       {
         "value": "Blocks.POTTED_CHERRY_SAPLING"
-      },
-      {
-        "value": "Blocks.TORCHFLOWER"
-      },
-      {
-        "value": "Blocks.PINK_PETALS"
-      },
-      {
-        "value": "Blocks.PITCHER_PLANT"
-      },
-      {
-        "value": "Blocks.PIGLIN_HEAD"
-      },
-      {
-        "value": "Blocks.PIGLIN_WALL_HEAD"
       }
     ],
     "functions": [],

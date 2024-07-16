@@ -56,19 +56,48 @@ public class InvisibleFootstepsNaturalEntitySpawningConditionProcedure {
 						}
 					}
 				}
+				if (mainjsonobject.get("cave_spawning").getAsBoolean() == true) {
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerchase")), SoundSource.NEUTRAL, 0, 0);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerchase")), SoundSource.NEUTRAL, 0, 0, false);
+						}
+					}
+				} else if (mainjsonobject.get("cave_spawning").getAsBoolean() == false) {
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerchase")), SoundSource.NEUTRAL, 0, 0);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerchase")), SoundSource.NEUTRAL, 0, 0, false);
+						}
+					}
+				}
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
-		if (mainjsonobject.get("invisible_entities_spawning").getAsBoolean() == false) {
-			return false;
-		} else if (mainjsonobject.get("invisible_entities_spawning").getAsBoolean() == true) {
-			if (!(!world.getEntitiesOfClass(InvisibleFootstepsEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty())
-					&& !(!world.getEntitiesOfClass(InvisibleShadowEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty())
-					&& !(!world.getEntitiesOfClass(InvisibleStaticEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty())
-					&& !(!world.getEntitiesOfClass(InvisibleLurkerFootstepsEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty())
-					&& !(!world.getEntitiesOfClass(InvisibleCaveSoundsEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty()) && (world instanceof Level _lvl ? _lvl.dimension() : Level.OVERWORLD) == Level.OVERWORLD) {
-				return true;
+		if (mainjsonobject.get("cave_spawning").getAsBoolean() == true) {
+			if (mainjsonobject.get("invisible_entities_spawning").getAsBoolean() == false) {
+				return false;
+			} else if (mainjsonobject.get("invisible_entities_spawning").getAsBoolean() == true) {
+				if (!(!world.getEntitiesOfClass(InvisibleFootstepsEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty())
+						&& !(!world.getEntitiesOfClass(InvisibleShadowEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty())
+						&& !(!world.getEntitiesOfClass(InvisibleStaticEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty())
+						&& !(!world.getEntitiesOfClass(InvisibleLurkerFootstepsEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty())
+						&& !(!world.getEntitiesOfClass(InvisibleCaveSoundsEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty()) && (world instanceof Level _lvl ? _lvl.dimension() : Level.OVERWORLD) == Level.OVERWORLD) {
+					return true;
+				}
+			}
+		} else if (mainjsonobject.get("cave_spawning").getAsBoolean() == false) {
+			if (y > 60) {
+				if (!(!world.getEntitiesOfClass(InvisibleFootstepsEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty())
+						&& !(!world.getEntitiesOfClass(InvisibleShadowEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty())
+						&& !(!world.getEntitiesOfClass(InvisibleStaticEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty())
+						&& !(!world.getEntitiesOfClass(InvisibleLurkerFootstepsEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty())
+						&& !(!world.getEntitiesOfClass(InvisibleCaveSoundsEntity.class, AABB.ofSize(new Vec3(x, y, z), 800, 800, 800), e -> true).isEmpty()) && (world instanceof Level _lvl ? _lvl.dimension() : Level.OVERWORLD) == Level.OVERWORLD) {
+					return true;
+				}
 			}
 		}
 		return false;

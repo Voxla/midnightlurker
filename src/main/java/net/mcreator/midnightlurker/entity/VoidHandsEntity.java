@@ -45,7 +45,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.midnightlurker.procedures.MidnightLurkerNaturalEntitySpawningConditionProcedure;
+import net.mcreator.midnightlurker.procedures.VoidGatewayNaturalEntitySpawningConditionProcedure;
 import net.mcreator.midnightlurker.procedures.LurandsattackplayerProcedure;
 import net.mcreator.midnightlurker.procedures.LurandsOnEntityTickUpdateProcedure;
 import net.mcreator.midnightlurker.init.MidnightlurkerModEntities;
@@ -194,7 +194,7 @@ public class VoidHandsEntity extends Monster implements GeoEntity {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return MidnightLurkerNaturalEntitySpawningConditionProcedure.execute(world, x, y, z);
+			return VoidGatewayNaturalEntitySpawningConditionProcedure.execute(world, x, y, z);
 		});
 	}
 

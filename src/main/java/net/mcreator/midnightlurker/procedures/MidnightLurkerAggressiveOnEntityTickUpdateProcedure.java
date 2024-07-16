@@ -496,6 +496,108 @@ public class MidnightLurkerAggressiveOnEntityTickUpdateProcedure {
 				}
 				bufferedReader.close();
 				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				if (mainjsonobject.get("aggro_lurker_break_trapdoors").getAsBoolean() == true) {
+					if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x + 1, y, z);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 0.5, z), null);
+							world.destroyBlock(_pos, false);
+						}
+					} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x - 1, y, z);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 0.5, z), null);
+							world.destroyBlock(_pos, false);
+						}
+					} else if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x, y, z + 1);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y + 0.5, z + 1), null);
+							world.destroyBlock(_pos, false);
+						}
+					} else if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x, y, z - 1);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y + 0.5, z - 1), null);
+							world.destroyBlock(_pos, false);
+						}
+					}
+					if ((world.getBlockState(BlockPos.containing(x + 1, y + 1, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x + 1, y + 1, z);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 0.5, z), null);
+							world.destroyBlock(_pos, false);
+						}
+					} else if ((world.getBlockState(BlockPos.containing(x - 1, y + 1, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x - 1, y + 1, z);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 0.5, z), null);
+							world.destroyBlock(_pos, false);
+						}
+					} else if ((world.getBlockState(BlockPos.containing(x, y + 1, z + 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x, y + 1, z + 1);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y + 0.5, z + 1), null);
+							world.destroyBlock(_pos, false);
+						}
+					} else if ((world.getBlockState(BlockPos.containing(x, y + 1, z - 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x, y + 1, z - 1);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y + 0.5, z - 1), null);
+							world.destroyBlock(_pos, false);
+						}
+					}
+					if ((world.getBlockState(BlockPos.containing(x + 1, y + 2, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x + 1, y + 2, z);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 0.5, z), null);
+							world.destroyBlock(_pos, false);
+						}
+					} else if ((world.getBlockState(BlockPos.containing(x - 1, y + 2, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x - 1, y + 2, z);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 0.5, z), null);
+							world.destroyBlock(_pos, false);
+						}
+					} else if ((world.getBlockState(BlockPos.containing(x, y + 2, z + 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x, y + 2, z + 1);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y + 0.5, z + 1), null);
+							world.destroyBlock(_pos, false);
+						}
+					} else if ((world.getBlockState(BlockPos.containing(x, y + 2, z - 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x, y + 2, z - 1);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y + 0.5, z - 1), null);
+							world.destroyBlock(_pos, false);
+						}
+					}
+					if ((world.getBlockState(BlockPos.containing(x + 1, y + 3, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x + 1, y + 3, z);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 0.5, z), null);
+							world.destroyBlock(_pos, false);
+						}
+					} else if ((world.getBlockState(BlockPos.containing(x - 1, y + 3, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x - 1, y + 3, z);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 0.5, z), null);
+							world.destroyBlock(_pos, false);
+						}
+					} else if ((world.getBlockState(BlockPos.containing(x, y + 3, z + 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x, y + 3, z + 1);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y + 0.5, z + 1), null);
+							world.destroyBlock(_pos, false);
+						}
+					} else if ((world.getBlockState(BlockPos.containing(x, y + 3, z - 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkertrapdoors")))) {
+						{
+							BlockPos _pos = BlockPos.containing(x, y + 3, z - 1);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y + 0.5, z - 1), null);
+							world.destroyBlock(_pos, false);
+						}
+					}
+				}
 				if (mainjsonobject.get("longer_lurker_chase").getAsBoolean() == false) {
 					if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty()) {
 						if (entity.getPersistentData().getDouble("AngeryTime") == 0) {
