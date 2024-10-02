@@ -22,6 +22,10 @@ public class MidnightlurkerModTabs {
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 
+		if (tabData.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
+			tabData.accept(MidnightlurkerModBlocks.TOUGH_DOOR.get().asItem());
+		}
+
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(MidnightlurkerModItems.MIDNIGHT_LURKER_AGGRESSIVE_SPAWN_EGG.get());
 			tabData.accept(MidnightlurkerModItems.MIDNIGHT_LURKER_RUNAWAY_SPAWN_EGG.get());

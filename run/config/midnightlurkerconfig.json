@@ -30,5 +30,7 @@
   "the nether spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest. you can set it to 0.5 for the lowest possible spawn rate.": 0,
   "void_gateway_spawn_rate": 3,
   "the void gateway spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest. you can set it to 0.5 for the lowest possible spawn rate.": 0,
-  "cave_spawning": true
+  "cave_spawning": true,
+  "nether_spawning": true,
+  "insanity_bar": true
 }

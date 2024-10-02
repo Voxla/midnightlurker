@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "midnightlurker:shattered_corner",
+    "midnightlurker:shattered_pane_end",
+    "midnightlurker:shattered_pane_x_corner",
+    "midnightlurker:shattered_pane_none",
+    "midnightlurker:shattered_pane_straight",
+    "midnightlurker:shattered_t_corner"
+  ]
+}

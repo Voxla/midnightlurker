@@ -65,7 +65,7 @@ public class MidnightLurkerShapeshifterNaturalEntitySpawningConditionProcedure {
 				e.printStackTrace();
 			}
 		}
-		if (mainjsonobject.get("villager_shapeshifter_spawning").getAsBoolean() == true) {
+		if ((world instanceof Level _lvl ? _lvl.dimension() : Level.OVERWORLD) == Level.OVERWORLD && mainjsonobject.get("villager_shapeshifter_spawning").getAsBoolean() == true) {
 			if (!world.getEntitiesOfClass(Villager.class, AABB.ofSize(new Vec3(x, y, z), 40, 40, 40), e -> true).isEmpty()) {
 				sx = -30;
 				found = false;

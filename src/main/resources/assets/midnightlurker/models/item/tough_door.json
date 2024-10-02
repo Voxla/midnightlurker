@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "midnightlurker:item/toughdoor"
+  },
+  "render_type": "translucent"
+}

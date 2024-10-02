@@ -7,6 +7,7 @@ import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -171,9 +172,9 @@ public class LurandsOnEntityTickUpdateProcedure {
 		}
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 60, 255, false, false));
-		if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkerdoors")))) {
-			if (((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp71
-					&& (world.getBlockState(BlockPos.containing(x + 1, y, z))).getValue(_getbp71)) == false) {
+		if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:doors"))) && !((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == Blocks.IRON_DOOR)) {
+			if (((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp73
+					&& (world.getBlockState(BlockPos.containing(x + 1, y, z))).getValue(_getbp73)) == false) {
 				{
 					BlockPos _pos = BlockPos.containing(x + 1, y, z);
 					BlockState _bs = world.getBlockState(_pos);
@@ -184,9 +185,9 @@ public class LurandsOnEntityTickUpdateProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((x + 1), y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"/playsound minecraft:block.wooden_door.open block @a ~ ~ ~ 1 1");
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkerdoors")))) {
-			if (((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp77
-					&& (world.getBlockState(BlockPos.containing(x - 1, y, z))).getValue(_getbp77)) == false) {
+		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:doors"))) && !((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.IRON_DOOR)) {
+			if (((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp81
+					&& (world.getBlockState(BlockPos.containing(x - 1, y, z))).getValue(_getbp81)) == false) {
 				{
 					BlockPos _pos = BlockPos.containing(x - 1, y, z);
 					BlockState _bs = world.getBlockState(_pos);
@@ -197,9 +198,9 @@ public class LurandsOnEntityTickUpdateProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((x - 1), y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"/playsound minecraft:block.wooden_door.open block @a ~ ~ ~ 1 1");
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkerdoors")))) {
-			if (((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp83
-					&& (world.getBlockState(BlockPos.containing(x, y, z + 1))).getValue(_getbp83)) == false) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation("minecraft:doors"))) && !((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.IRON_DOOR)) {
+			if (((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp89
+					&& (world.getBlockState(BlockPos.containing(x, y, z + 1))).getValue(_getbp89)) == false) {
 				{
 					BlockPos _pos = BlockPos.containing(x, y, z + 1);
 					BlockState _bs = world.getBlockState(_pos);
@@ -210,9 +211,9 @@ public class LurandsOnEntityTickUpdateProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, (z + 1)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"/playsound minecraft:block.wooden_door.open block @a ~ ~ ~ 1 1");
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkerdoors")))) {
-			if (((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp89
-					&& (world.getBlockState(BlockPos.containing(x, y, z - 1))).getValue(_getbp89)) == false) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation("minecraft:doors"))) && !((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.IRON_DOOR)) {
+			if (((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock().getStateDefinition().getProperty("open") instanceof BooleanProperty _getbp97
+					&& (world.getBlockState(BlockPos.containing(x, y, z - 1))).getValue(_getbp97)) == false) {
 				{
 					BlockPos _pos = BlockPos.containing(x, y, z - 1);
 					BlockState _bs = world.getBlockState(_pos);

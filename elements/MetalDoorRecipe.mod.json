@@ -1,0 +1,48 @@
+{
+  "_fv": 47,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "REDSTONE",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.IRON_BLOCK"
+      },
+      {
+        "value": "Blocks.IRON_BLOCK"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:ToughDoor"
+    },
+    "name": "metal_door_recipe",
+    "namespace": "mod"
+  }
+}

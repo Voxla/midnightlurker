@@ -36,6 +36,8 @@ import net.mcreator.midnightlurker.init.MidnightlurkerModMobEffects;
 import net.mcreator.midnightlurker.init.MidnightlurkerModMenus;
 import net.mcreator.midnightlurker.init.MidnightlurkerModItems;
 import net.mcreator.midnightlurker.init.MidnightlurkerModEntities;
+import net.mcreator.midnightlurker.init.MidnightlurkerModBlocks;
+import net.mcreator.midnightlurker.init.MidnightlurkerModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -55,7 +57,8 @@ public class MidnightlurkerMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		MidnightlurkerModSounds.REGISTRY.register(bus);
-
+		MidnightlurkerModBlocks.REGISTRY.register(bus);
+		MidnightlurkerModBlockEntities.REGISTRY.register(bus);
 		MidnightlurkerModItems.REGISTRY.register(bus);
 		MidnightlurkerModEntities.REGISTRY.register(bus);
 

@@ -9,8 +9,6 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -61,52 +59,10 @@ public class MidnightlurkerNEOnEntityTickUpdateProcedure {
 			return;
 		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		File lurker = new File("");
-		if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkerdoors")))) {
-			{
-				BlockPos _pos = BlockPos.containing(x + 1, y, z);
-				Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 0.5, z), null);
-				world.destroyBlock(_pos, false);
-			}
-		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkerdoors")))) {
-			{
-				BlockPos _pos = BlockPos.containing(x - 1, y, z);
-				Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 0.5, z), null);
-				world.destroyBlock(_pos, false);
-			}
-		} else if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkerdoors")))) {
-			{
-				BlockPos _pos = BlockPos.containing(x, y, z + 1);
-				Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y + 0.5, z + 1), null);
-				world.destroyBlock(_pos, false);
-			}
-		} else if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:lurkerdoors")))) {
-			{
-				BlockPos _pos = BlockPos.containing(x, y, z - 1);
-				Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y + 0.5, z - 1), null);
-				world.destroyBlock(_pos, false);
-			}
-		}
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 60, 0, false, false));
 		if (entity.isPassenger()) {
 			entity.stopRiding();
-		}
-		if (world.getBlockState(BlockPos.containing(x + 1, y + 0, z)).canOcclude() && !(world.getBlockState(BlockPos.containing(x + 1, y + 0, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:cannotclimb")))
-				&& (!world.getBlockState(BlockPos.containing(x, y + 2, z)).canOcclude() || !world.getBlockState(BlockPos.containing(x, y + 3, z)).canOcclude())
-				&& !world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, (y + 52), z), 100.1, 100.1, 100.1), e -> true).isEmpty() && (entity.getDirection()) == Direction.EAST) {
-			entity.setDeltaMovement(new Vec3(0.2, 0.2, (entity.getDeltaMovement().z())));
-		} else if (world.getBlockState(BlockPos.containing(x - 1, y + 0, z)).canOcclude() && !(world.getBlockState(BlockPos.containing(x - 1, y + 0, z))).is(BlockTags.create(new ResourceLocation("midnightlurker:cannotclimb")))
-				&& (!world.getBlockState(BlockPos.containing(x, y + 2, z)).canOcclude() || !world.getBlockState(BlockPos.containing(x, y + 3, z)).canOcclude())
-				&& !world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, (y + 52), z), 100.1, 100.1, 100.1), e -> true).isEmpty() && (entity.getDirection()) == Direction.WEST) {
-			entity.setDeltaMovement(new Vec3((-0.2), 0.2, (entity.getDeltaMovement().z())));
-		} else if (world.getBlockState(BlockPos.containing(x, y + 0, z + 1)).canOcclude() && !(world.getBlockState(BlockPos.containing(x, y + 0, z + 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:cannotclimb")))
-				&& (!world.getBlockState(BlockPos.containing(x, y + 2, z)).canOcclude() || !world.getBlockState(BlockPos.containing(x, y + 3, z)).canOcclude())
-				&& !world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, (y + 52), z), 100.1, 100.1, 100.1), e -> true).isEmpty() && (entity.getDirection()) == Direction.SOUTH) {
-			entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x()), 0.2, 0.2));
-		} else if (world.getBlockState(BlockPos.containing(x, y + 0, z - 1)).canOcclude() && !(world.getBlockState(BlockPos.containing(x, y + 0, z - 1))).is(BlockTags.create(new ResourceLocation("midnightlurker:cannotclimb")))
-				&& (!world.getBlockState(BlockPos.containing(x, y + 2, z)).canOcclude() || !world.getBlockState(BlockPos.containing(x, y + 3, z)).canOcclude())
-				&& !world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, (y + 52), z), 100.1, 100.1, 100.1), e -> true).isEmpty() && (entity.getDirection()) == Direction.NORTH) {
-			entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x()), 0.2, (-0.2)));
 		}
 		if (world.getBlockState(BlockPos.containing(x + 1, y, z)).canOcclude() && !world.getBlockState(BlockPos.containing(x + 4, y, z)).canOcclude() && entity.getY() < 50) {
 			if (entity.getPersistentData().getDouble("LurkerTime") == 0) {
@@ -118,20 +74,22 @@ public class MidnightlurkerNEOnEntityTickUpdateProcedure {
 				if (entity instanceof MidnightLurkerAggressiveEntity) {
 					((MidnightLurkerAggressiveEntity) entity).setAnimation("breaking1");
 				}
-				world.destroyBlock(BlockPos.containing(x + 1, y + 0, z), false);
-				world.destroyBlock(BlockPos.containing(x + 1, y + 1, z), false);
-				world.destroyBlock(BlockPos.containing(x + 1, y + 2, z), false);
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerfinalbreak")), SoundSource.BLOCKS, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerfinalbreak")), SoundSource.BLOCKS, 1, 1, false);
+				if (!world.isClientSide()) {
+					world.destroyBlock(BlockPos.containing(x + 1, y + 0, z), false);
+					world.destroyBlock(BlockPos.containing(x + 1, y + 1, z), false);
+					world.destroyBlock(BlockPos.containing(x + 1, y + 2, z), false);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerfinalbreak")), SoundSource.BLOCKS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerfinalbreak")), SoundSource.BLOCKS, 1, 1, false);
+						}
 					}
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/playsound midnightlurker:lurkerfinalbreak block @a");
 				}
-				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(
-							new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							"/playsound midnightlurker:lurkerfinalbreak block @a");
 			}
 			if (entity.getPersistentData().getDouble("LurkerTime") == 80) {
 				if (entity instanceof MidnightLurkerAggressiveEntity) {
@@ -200,13 +158,15 @@ public class MidnightlurkerNEOnEntityTickUpdateProcedure {
 				if (entity instanceof MidnightLurkerAggressiveEntity) {
 					((MidnightLurkerAggressiveEntity) entity).setAnimation("breaking1");
 				}
-				world.destroyBlock(BlockPos.containing(x - 1, y + 0, z), false);
-				world.destroyBlock(BlockPos.containing(x - 1, y + 1, z), false);
-				world.destroyBlock(BlockPos.containing(x - 1, y + 2, z), false);
-				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(
-							new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							"/playsound midnightlurker:lurkerfinalbreak block @a");
+				if (!world.isClientSide()) {
+					world.destroyBlock(BlockPos.containing(x - 1, y + 0, z), false);
+					world.destroyBlock(BlockPos.containing(x - 1, y + 1, z), false);
+					world.destroyBlock(BlockPos.containing(x - 1, y + 2, z), false);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/playsound midnightlurker:lurkerfinalbreak block @a");
+				}
 			}
 			if (entity.getPersistentData().getDouble("LurkerTime") == 80) {
 				if (entity instanceof MidnightLurkerAggressiveEntity) {
@@ -275,20 +235,22 @@ public class MidnightlurkerNEOnEntityTickUpdateProcedure {
 				if (entity instanceof MidnightLurkerAggressiveEntity) {
 					((MidnightLurkerAggressiveEntity) entity).setAnimation("breaking1");
 				}
-				world.destroyBlock(BlockPos.containing(x, y + 0, z + 1), false);
-				world.destroyBlock(BlockPos.containing(x, y + 1, z + 1), false);
-				world.destroyBlock(BlockPos.containing(x, y + 2, z + 1), false);
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerfinalbreak")), SoundSource.BLOCKS, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerfinalbreak")), SoundSource.BLOCKS, 1, 1, false);
+				if (!world.isClientSide()) {
+					world.destroyBlock(BlockPos.containing(x, y + 0, z + 1), false);
+					world.destroyBlock(BlockPos.containing(x, y + 1, z + 1), false);
+					world.destroyBlock(BlockPos.containing(x, y + 2, z + 1), false);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerfinalbreak")), SoundSource.BLOCKS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerfinalbreak")), SoundSource.BLOCKS, 1, 1, false);
+						}
 					}
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/playsound midnightlurker:lurkerfinalbreak block @a");
 				}
-				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(
-							new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							"/playsound midnightlurker:lurkerfinalbreak block @a");
 			}
 			if (entity.getPersistentData().getDouble("LurkerTime") == 80) {
 				if (entity instanceof MidnightLurkerAggressiveEntity) {
@@ -357,18 +319,20 @@ public class MidnightlurkerNEOnEntityTickUpdateProcedure {
 				if (entity instanceof MidnightLurkerAggressiveEntity) {
 					((MidnightLurkerAggressiveEntity) entity).setAnimation("breaking1");
 				}
-				world.destroyBlock(BlockPos.containing(x, y + 0, z - 1), false);
-				world.destroyBlock(BlockPos.containing(x, y + 1, z - 1), false);
-				world.destroyBlock(BlockPos.containing(x, y + 2, z - 1), false);
-				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(
-							new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							"/playsound midnightlurker:lurkerfinalbreak block @a");
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerfinalbreak")), SoundSource.BLOCKS, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerfinalbreak")), SoundSource.BLOCKS, 1, 1, false);
+				if (!world.isClientSide()) {
+					world.destroyBlock(BlockPos.containing(x, y + 0, z - 1), false);
+					world.destroyBlock(BlockPos.containing(x, y + 1, z - 1), false);
+					world.destroyBlock(BlockPos.containing(x, y + 2, z - 1), false);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/playsound midnightlurker:lurkerfinalbreak block @a");
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerfinalbreak")), SoundSource.BLOCKS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerfinalbreak")), SoundSource.BLOCKS, 1, 1, false);
+						}
 					}
 				}
 			}
@@ -444,33 +408,6 @@ public class MidnightlurkerNEOnEntityTickUpdateProcedure {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles((SimpleParticleType) (MidnightlurkerModParticleTypes.VOID_DOT.get()), x, y, z, 2, 0.3, 1.2, 0.3, 0.1);
 		}
-		if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == Blocks.GLASS_PANE || (world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == Blocks.GLASS) {
-			world.destroyBlock(BlockPos.containing(x + 1, y, z), false);
-		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.GLASS_PANE || (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.GLASS) {
-			world.destroyBlock(BlockPos.containing(x - 1, y, z), false);
-		} else if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.GLASS_PANE || (world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.GLASS) {
-			world.destroyBlock(BlockPos.containing(x, y, z + 1), false);
-		} else if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.GLASS_PANE || (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.GLASS) {
-			world.destroyBlock(BlockPos.containing(x, y, z - 1), false);
-		}
-		if ((world.getBlockState(BlockPos.containing(x + 1, y + 1, z))).getBlock() == Blocks.GLASS_PANE || (world.getBlockState(BlockPos.containing(x + 1, y + 1, z))).getBlock() == Blocks.GLASS) {
-			world.destroyBlock(BlockPos.containing(x + 1, y + 1, z), false);
-		} else if ((world.getBlockState(BlockPos.containing(x - 1, y + 1, z))).getBlock() == Blocks.GLASS_PANE || (world.getBlockState(BlockPos.containing(x - 1, y + 1, z))).getBlock() == Blocks.GLASS) {
-			world.destroyBlock(BlockPos.containing(x - 1, y + 1, z), false);
-		} else if ((world.getBlockState(BlockPos.containing(x, y + 1, z + 1))).getBlock() == Blocks.GLASS_PANE || (world.getBlockState(BlockPos.containing(x, y + 1, z + 1))).getBlock() == Blocks.GLASS) {
-			world.destroyBlock(BlockPos.containing(x, y + 1, z + 1), false);
-		} else if ((world.getBlockState(BlockPos.containing(x, y + 1, z - 1))).getBlock() == Blocks.GLASS_PANE || (world.getBlockState(BlockPos.containing(x, y + 1, z - 1))).getBlock() == Blocks.GLASS) {
-			world.destroyBlock(BlockPos.containing(x, y + 1, z - 1), false);
-		}
-		if ((world.getBlockState(BlockPos.containing(x + 1, y + 2, z))).getBlock() == Blocks.GLASS_PANE || (world.getBlockState(BlockPos.containing(x + 1, y + 2, z))).getBlock() == Blocks.GLASS) {
-			world.destroyBlock(BlockPos.containing(x + 1, y + 2, z), false);
-		} else if ((world.getBlockState(BlockPos.containing(x - 1, y + 2, z))).getBlock() == Blocks.GLASS_PANE || (world.getBlockState(BlockPos.containing(x - 1, y + 2, z))).getBlock() == Blocks.GLASS) {
-			world.destroyBlock(BlockPos.containing(x - 1, y + 2, z), false);
-		} else if ((world.getBlockState(BlockPos.containing(x, y + 2, z + 1))).getBlock() == Blocks.GLASS_PANE || (world.getBlockState(BlockPos.containing(x, y + 2, z + 1))).getBlock() == Blocks.GLASS) {
-			world.destroyBlock(BlockPos.containing(x, y + 2, z + 1), false);
-		} else if ((world.getBlockState(BlockPos.containing(x, y + 2, z - 1))).getBlock() == Blocks.GLASS_PANE || (world.getBlockState(BlockPos.containing(x, y + 2, z - 1))).getBlock() == Blocks.GLASS) {
-			world.destroyBlock(BlockPos.containing(x, y + 2, z - 1), false);
-		}
 		if (entity.getPersistentData().getDouble("LurkerScream") == 0) {
 			entity.getPersistentData().putDouble("LurkerScream", 270);
 		} else {
@@ -478,7 +415,7 @@ public class MidnightlurkerNEOnEntityTickUpdateProcedure {
 		}
 		if (entity.getPersistentData().getDouble("LurkerScream") == 1) {
 			if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 25, 25, 25), e -> true).isEmpty()) {
-				MidnightlurkerMod.queueServerWork(1, () -> {
+				if (!world.isClientSide()) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerscream")), SoundSource.NEUTRAL, 50, 1);
@@ -486,7 +423,7 @@ public class MidnightlurkerNEOnEntityTickUpdateProcedure {
 							_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("midnightlurker:lurkerscream")), SoundSource.NEUTRAL, 50, 1, false);
 						}
 					}
-				});
+				}
 			}
 		}
 		lurker = new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "midnightlurkerconfig.json");
@@ -500,6 +437,9 @@ public class MidnightlurkerNEOnEntityTickUpdateProcedure {
 				}
 				bufferedReader.close();
 				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				if (mainjsonobject.get("aggro_lurker_break_trapdoors").getAsBoolean() == true) {
+					LurkerBreakTrapDoorsProcedure.execute(world, x, y, z);
+				}
 				if (mainjsonobject.get("longer_lurker_chase").getAsBoolean() == false) {
 					if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty()) {
 						if (entity.getPersistentData().getDouble("AngeryTime") == 0) {
@@ -877,5 +817,8 @@ public class MidnightlurkerNEOnEntityTickUpdateProcedure {
 				}
 			}
 		}
+		LurkerBreakDoorsProcProcedure.execute(world, x, y, z);
+		LurkerBreakGlassProcProcedure.execute(world, x, y, z);
+		LurkerClimbingProcedure.execute(world, x, y, z, entity);
 	}
 }

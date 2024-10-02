@@ -65,7 +65,7 @@ public class MidnightLurkerAggressiveEntityIsHurtProcedure {
 						}
 					}
 				} else if (mainjsonobject.get("lurker_invulnerable").getAsBoolean() == false) {
-					if ((entity instanceof MidnightLurkerUnprovokedEntity || entity instanceof MidnightlurkerNEEntity) && sourceentity instanceof Player) {
+					if ((entity instanceof MidnightLurkerUnprovokedEntity || entity instanceof MidnightlurkerNEEntity || entity instanceof MidnightLurkerBackturnedEntity) && sourceentity instanceof Player) {
 						if (entity.getPersistentData().getBoolean("Stunned") == false) {
 							entity.getPersistentData().putBoolean("Stunned", true);
 						}

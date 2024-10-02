@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "midnightlurker:block/shattered_glass",
+    "up": "midnightlurker:block/shattered_glass",
+    "north": "midnightlurker:block/shattered_glass",
+    "east": "midnightlurker:block/shattered_glass",
+    "south": "midnightlurker:block/shattered_glass",
+    "west": "midnightlurker:block/shattered_glass",
+    "particle": "midnightlurker:block/shattered_glass"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:ShatteredPaneNone"
+      },
+      {
+        "value": "CUSTOM:ShatteredPaneStraight"
+      },
+      {
+        "value": "CUSTOM:ShatteredCorner"
+      },
+      {
+        "value": "CUSTOM:ShatteredTCorner"
+      },
+      {
+        "value": "CUSTOM:ShatteredPaneXCorner"
+      },
+      {
+        "value": "CUSTOM:ShatteredPaneEnd"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "panes",
+    "namespace": "custom_panes"
+  }
+}

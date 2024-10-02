@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "midnightlurker:block/shattered_t_corner"
+    },
+    "facing=east": {
+      "model": "midnightlurker:block/shattered_t_corner",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "midnightlurker:block/shattered_t_corner",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "midnightlurker:block/shattered_t_corner",
+      "y": 270
+    }
+  }
+}

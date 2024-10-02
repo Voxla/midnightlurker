@@ -56,8 +56,8 @@ public class LurkerconfigProcedure {
 			mainjsonobject.addProperty("amnesia", true);
 			mainjsonobject.addProperty("invisible_entities_spawning", true);
 			mainjsonobject.addProperty("encounters_progress_stages", true);
-			mainjsonobject.addProperty("show_amnesia_effect_in_inv", true);
-			mainjsonobject.addProperty("show_insanity_effect_in_inv", true);
+			mainjsonobject.addProperty("show_amnesia_effect_in_inv", false);
+			mainjsonobject.addProperty("show_insanity_effect_in_inv", false);
 			mainjsonobject.addProperty("villager_shapeshifter_spawning", true);
 			mainjsonobject.addProperty("cow_shapeshifter_spawning", true);
 			mainjsonobject.addProperty("pig_shapeshifter_spawning", true);
@@ -66,6 +66,8 @@ public class LurkerconfigProcedure {
 			mainjsonobject.addProperty("void_gateway_spawn_rate", 3);
 			mainjsonobject.addProperty("the void gateway spawn rate can range from 1 to 5, with 1 being the lowest and 5 being the highest. you can set it to 0.5 for the lowest possible spawn rate.", 0);
 			mainjsonobject.addProperty("cave_spawning", true);
+			mainjsonobject.addProperty("nether_spawning", true);
+			mainjsonobject.addProperty("insanity_bar", true);
 			{
 				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 				try {
@@ -166,7 +168,7 @@ public class LurkerconfigProcedure {
 					}
 				}
 				if (lurker.exists() && !mainjsonobject.has("show_amnesia_effect_in_inv")) {
-					mainjsonobject.addProperty("show_amnesia_effect_in_inv", true);
+					mainjsonobject.addProperty("show_amnesia_effect_in_inv", false);
 					{
 						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 						try {
@@ -179,7 +181,7 @@ public class LurkerconfigProcedure {
 					}
 				}
 				if (lurker.exists() && !mainjsonobject.has("show_insanity_effect_in_inv")) {
-					mainjsonobject.addProperty("show_insanity_effect_in_inv", true);
+					mainjsonobject.addProperty("show_insanity_effect_in_inv", false);
 					{
 						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 						try {
@@ -284,6 +286,32 @@ public class LurkerconfigProcedure {
 				}
 				if (lurker.exists() && !mainjsonobject.has("cave_spawning")) {
 					mainjsonobject.addProperty("cave_spawning", true);
+					{
+						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(lurker);
+							fileWriter.write(mainGSONBuilderVariable.toJson(mainjsonobject));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
+				if (lurker.exists() && !mainjsonobject.has("nether_spawning")) {
+					mainjsonobject.addProperty("nether_spawning", true);
+					{
+						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(lurker);
+							fileWriter.write(mainGSONBuilderVariable.toJson(mainjsonobject));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
+				if (lurker.exists() && !mainjsonobject.has("insanity_bar")) {
+					mainjsonobject.addProperty("insanity_bar", true);
 					{
 						Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 						try {

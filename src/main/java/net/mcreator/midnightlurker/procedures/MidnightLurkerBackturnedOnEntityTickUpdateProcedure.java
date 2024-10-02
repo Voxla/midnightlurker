@@ -464,6 +464,49 @@ public class MidnightLurkerBackturnedOnEntityTickUpdateProcedure {
 					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 3, 3, false, false));
 			}
 		}
+		if (entity.getPersistentData().getBoolean("Stunned") == true) {
+			if (entity.getPersistentData().getDouble("StunTimer") <= 0) {
+				entity.getPersistentData().putDouble("StunTimer", 1);
+			}
+		}
+		if (entity.getPersistentData().getDouble("StunTimer") > 0 && entity.getPersistentData().getDouble("StunTimer") < 200) {
+			entity.getPersistentData().putDouble("StunTimer", (entity.getPersistentData().getDouble("StunTimer") + 1));
+		}
+		if (entity.getPersistentData().getDouble("StunTimer") >= 200) {
+			entity.getPersistentData().putDouble("StunTimer", 0);
+		}
+		if (entity.getPersistentData().getDouble("StunTimer") >= 98) {
+			if (entity.getPersistentData().getBoolean("Stunned") == true) {
+				entity.getPersistentData().putBoolean("Stunned", false);
+			}
+		}
+		if (entity.getPersistentData().getDouble("StunTimer") > 0 && entity.getPersistentData().getDouble("StunTimer") < 98) {
+			entity.setDeltaMovement(new Vec3(0, 0, 0));
+			if (entity instanceof MidnightLurkerBackturnedEntity) {
+				((MidnightLurkerBackturnedEntity) entity).setAnimation("stunned5");
+			}
+		}
+		if (entity.getPersistentData().getDouble("StunTimer") == 2) {
+			if (!world.getEntitiesOfClass(MidnightLurkerBackturnedEntity.class, AABB.ofSize(new Vec3(x, y, z), 3, 3, 3), e -> true).isEmpty()) {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							"/playsound midnightlurker:lurker_stunned neutral @a ~ ~ ~ 1 1");
+			}
+			MidnightlurkerMod.queueServerWork(30, () -> {
+				if (!world.getEntitiesOfClass(MidnightLurkerBackturnedEntity.class, AABB.ofSize(new Vec3(x, y, z), 3, 3, 3), e -> true).isEmpty()) {
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"/playsound midnightlurker:lurker_taunt neutral @a ~ ~ ~ 0.7 1");
+				}
+			});
+		}
+		if (entity.getPersistentData().getDouble("StunTimer") == 88) {
+			if (!world.getEntitiesOfClass(MidnightLurkerBackturnedEntity.class, AABB.ofSize(new Vec3(x, y, z), 3, 3, 3), e -> true).isEmpty()) {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							"/playsound midnightlurker:lurker_stun_over neutral @a ~ ~ ~ 1 1");
+			}
+		}
 		lurker = new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "midnightlurkerconfig.json");
 		{
 			try {
@@ -476,7 +519,7 @@ public class MidnightLurkerBackturnedOnEntityTickUpdateProcedure {
 				bufferedReader.close();
 				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				if (mainjsonobject.get("lurker_persist_during_day").getAsBoolean() == false) {
-					if ((world instanceof Level _lvl241 && _lvl241.isDay()) == true && y > 60) {
+					if ((world instanceof Level _lvl266 && _lvl266.isDay()) == true && y > 60) {
 						if (entity instanceof MidnightLurkerBackturnedEntity) {
 							if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 30, 30, 30), e -> true).isEmpty()) {
 								MidnightlurkerMod.queueServerWork(2, () -> {

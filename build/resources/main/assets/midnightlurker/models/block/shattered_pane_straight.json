@@ -1,0 +1,9 @@
+{
+  "parent": "midnightlurker:custom/pane_straight",
+  "textures": {
+    "all": "midnightlurker:block/shattered_glass",
+    "particle": "midnightlurker:block/shattered_glass",
+    "0": "midnightlurker:block/shattered_glass"
+  },
+  "render_type": "cutout"
+}

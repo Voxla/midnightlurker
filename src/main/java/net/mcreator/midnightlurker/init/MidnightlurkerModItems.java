@@ -9,7 +9,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.DoubleHighBlockItem;
+import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.midnightlurker.item.LurkerBookItem;
 import net.mcreator.midnightlurker.MidnightlurkerMod;
@@ -62,4 +65,20 @@ public class MidnightlurkerModItems {
 	public static final RegistryObject<Item> MIDNIGHT_LURKER_CREEP_SPAWN_EGG = REGISTRY.register("midnight_lurker_creep_spawn_egg",
 			() -> new ForgeSpawnEggItem(MidnightlurkerModEntities.MIDNIGHT_LURKER_CREEP, -13421773, -3355444, new Item.Properties()));
 	public static final RegistryObject<Item> LURKER_BOOK = REGISTRY.register("lurker_book", () -> new LurkerBookItem());
+	public static final RegistryObject<Item> TOUGH_DOOR = doubleBlock(MidnightlurkerModBlocks.TOUGH_DOOR);
+	public static final RegistryObject<Item> SHATTERED_GLASS = block(MidnightlurkerModBlocks.SHATTERED_GLASS);
+	public static final RegistryObject<Item> SHATTERED_PANE_NONE = block(MidnightlurkerModBlocks.SHATTERED_PANE_NONE);
+	public static final RegistryObject<Item> SHATTERED_PANE_STRAIGHT = block(MidnightlurkerModBlocks.SHATTERED_PANE_STRAIGHT);
+	public static final RegistryObject<Item> SHATTERED_CORNER = block(MidnightlurkerModBlocks.SHATTERED_CORNER);
+	public static final RegistryObject<Item> SHATTERED_T_CORNER = block(MidnightlurkerModBlocks.SHATTERED_T_CORNER);
+	public static final RegistryObject<Item> SHATTERED_PANE_X_CORNER = block(MidnightlurkerModBlocks.SHATTERED_PANE_X_CORNER);
+	public static final RegistryObject<Item> SHATTERED_PANE_END = block(MidnightlurkerModBlocks.SHATTERED_PANE_END);
+
+	private static RegistryObject<Item> block(RegistryObject<Block> block) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+	}
+
+	private static RegistryObject<Item> doubleBlock(RegistryObject<Block> block) {
+		return REGISTRY.register(block.getId().getPath(), () -> new DoubleHighBlockItem(block.get(), new Item.Properties()));
+	}
 }
